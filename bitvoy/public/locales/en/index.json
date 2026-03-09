@@ -1,0 +1,158 @@
+{
+  "banner": {
+    "headline": "BitVoY Wallet",
+    "cta": "Get Started"
+  },
+  "sectionOne": {
+    "title": "Welcome",
+    "subtitle": "Start your Web3 journey with BitVoY",
+    "cta": "Get Started"
+  },
+  "sectionTwo": {
+    "title": "BitVoY",
+    "subtitle": "Financial adventure starts with a small step — and becomes a shared journey.",
+    "body": "BitVoy opens the door to finance and investment, letting anyone safely and intuitively take part in global ventures.",
+    "aboutButton": "About BitVoy"
+  },
+  "email": {
+    "warning": {
+      "title": "Email Setup Required for Easy Recovery",
+      "description": "The MPC wallet has been successfully initialized, but the email address required for easy recovery has not been set up. By setting up an email address, you can recover your wallet through the Guardian Network using Passkey authentication.",
+      "startSetup": "Start Email Setup",
+      "setupLater": "Setup Later"
+    },
+    "setup": {
+      "title": "Easy Recovery Email Setup",
+      "guardianTitle": "🔐 Guardian Network Recovery",
+      "description": "By setting up an email address, you can recover your wallet through the Guardian Network in emergency situations. This setup is optional but recommended for enhanced security.",
+      "emailLabel": "Email Address",
+      "emailPlaceholder": "your.email@example.com",
+      "sendCode": "Send Verification Code"
+    },
+    "verification": {
+      "title": "Complete Email Verification",
+      "verifyTitle": "✅ Verify Authentication Code",
+      "description": "Please enter the 6-digit authentication code sent to your email to complete the email setup.",
+      "codeLabel": "Authentication Code",
+      "codePlaceholder": "Enter 6-digit code",
+      "complete": "Verify and Complete Setup"
+    }
+  },
+  "wallet": {
+    "main": "Main Wallet",
+    "market": "Market",
+    "services": "Services",
+    "qrpay": "QR Pay",
+    "restore": {
+      "description": "To restore your previously used account and get started, please click the link:",
+      "link": "Restore Account"
+    }
+  },
+  "walletconnect": {
+    "deepLink": {
+      "signinRequired": "Please log in to connect your wallet."
+    }
+  },
+    "dialogs": {
+        "restore": {
+            "title": "Restore",
+            "ready": "Ready to restore",
+            "cta": "Continue"
+        },
+        "generic": {
+            "close": "Close"
+        },
+        "registration": {
+            "title": "Registration",
+            "creating": "Creating secure MPC wallet...",
+            "successTitle": "Success!",
+            "successMessage": "Your wallet has been created successfully!"
+        },
+        "signin": {
+            "title": "Log-in Successful",
+            "message": "Log-in completed."
+        },
+        "emergencyRecovery": {
+            "title": "Easy Recovery Successful",
+            "message": "Wallet recovery completed successfully!",
+            "dialogTitle": "Easy Recovery",
+            "startRecovery": "Start Recovery"
+        },
+        "restoration": {
+            "title": "Restoration Complete!",
+            "message": "Your wallet has been restored successfully with JWT authentication!"
+        },
+        "emergencySigning": {
+            "title": "Emergency Signing with Reshare Successful",
+            "message": "Transaction signed successfully with Reshare!",
+            "details": "Signing Details:",
+            "signature": "Signature:"
+        },
+        "emailSecurity": {
+            "title": "🛡️ Enhanced Security for Easy Recovery",
+            "description": "Email verification enables secure easy recovery with dual authentication: Email + Passkey biometric/security key verification."
+        },
+        "iosInit": {
+            "title": "Get Started",
+            "firstTimeUse": "First time use",
+            "subsequentUse": "Log-in"
+        }
+    },
+    "mySetup": {
+        "title": "My Setup",
+        "pushNotifications": "Push Notifications",
+        "developer": "Developer",
+        "network": "Network",
+        "close": "Close",
+        "notSupported": "To enable push notifications, please:\nAdd to Home Screen\nUpdate your OS\n",
+        "permissionDenied": "To enable notifications, please change the settings in Settings > Notifications > BitVoy.",
+        "paymentSettings": "Payment Settings",
+        "paymentSettingsDescription": "Configure default chain and token for QR Pay",
+        "preferredChain": "Preferred Chain",
+        "preferredToken": "Preferred Token",
+        "selectChain": "Select Chain",
+        "selectToken": "Select Token",
+        "save": "Save",
+        "saved": "Settings saved successfully",
+        "language": "Language",
+        "language.en": "English",
+        "language.ja": "日本語"
+    },
+    "pwa": {
+        "waitingForInstallPrompt": "Please try again once the add to home screen option is ready."
+    },
+    "payments": {
+        "scanToPay": "Scan to pay",
+        "receivePayment": "Receive",
+        "scanTitle": "Scan QR Code",
+        "scanDescription": "Scan a QR code to pay",
+        "scanning": "Scanning...",
+        "cancel": "Cancel",
+        "confirmPayment": "Confirm Payment",
+        "paymentDetails": "Payment Details",
+        "to": "To",
+        "amount": "Amount",
+        "token": "Token",
+        "chain": "Chain",
+        "memo": "Memo",
+        "approve": "Approve",
+        "receiveTitle": "Receive Payment",
+        "receiveDescription": "Generate QR code for receiving payment",
+        "amountLabel": "Amount",
+        "amountPlaceholder": "Enter amount",
+        "memoLabel": "Memo (Optional)",
+        "memoPlaceholder": "Enter memo",
+        "generateQR": "Generate QR Code",
+        "invalidQR": "Invalid QR code format",
+        "unsupportedChain": "Unsupported chain. Please use the chain configured in My Setup.",
+        "unsupportedToken": "Unsupported token. Please use the token configured in My Setup.",
+        "chainMismatch": "Chain mismatch. Expected: {{expected}}, Got: {{got}}",
+        "tokenMismatch": "Token mismatch. Expected: {{expected}}, Got: {{got}}"
+    },
+    "actions": {
+        "getStarted": "Get Started",
+        "mySetup": "My Setup",
+        "signOut": "Log Out",
+        "emergencyRecovery": "Easy Recovery"
+    }
+}

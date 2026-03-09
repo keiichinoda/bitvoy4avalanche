@@ -1,0 +1,9 @@
+{
+  "getStarted": {
+    "title": "🔐 BitVoy アカウント作成",
+    "required": "アカウント作成が必要です",
+    "message": "認証を完了するには、まずBitVoyアカウントを作成する必要があります。下のボタンをクリックしてアカウント作成プロセスを開始してください。",
+    "createAccount": "BitVoyアカウントを作成",
+    "cancel": "キャンセル"
+  }
+}

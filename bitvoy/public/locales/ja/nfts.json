@@ -1,0 +1,36 @@
+{
+  "banner": {
+    "title": "NFTs",
+    "mainWallet": "メインウォレット"
+  },
+  "actions": {
+    "signOut": "ログアウト",
+    "import": "NFTをインポート",
+    "mint": "NFTをミント",
+    "send": "送る",
+    "next": "次へ",
+    "back": "戻る",
+    "scan": "スキャン",
+    "copy": "コピー"
+  },
+  "list": {
+    "title": "NFTs"
+  },
+  "detail": {
+    "title": "詳細",
+    "name": "名称",
+    "chain": "チェーン",
+    "contract": "コントラクトアドレス",
+    "tokenId": "トークンID",
+    "creator": "作成者",
+    "attributes": "属性"
+  },
+  "sendForm": {
+    "addressPlaceholder": "アドレス"
+  },
+  "importForm": {
+    "addressPlaceholder": "アドレス",
+    "collectibleIdPlaceholder": "コレクティブルID"
+  }
+}
+

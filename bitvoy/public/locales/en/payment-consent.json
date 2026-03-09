@@ -1,0 +1,21 @@
+{
+  "pay": {
+    "title": "Payment Confirmation",
+    "confirm": "Confirm Payment",
+    "currency": "Currency",
+    "amount": "Amount",
+    "to": "Recipient",
+    "sign": "Sign & Send",
+    "cancel": "Cancel",
+    "completed": "Payment Completed",
+    "processing": "Processing...",
+    "success": "Payment completed successfully",
+    "failed": "Payment failed",
+    "canceled": "Payment canceled",
+    "error": "Error",
+    "insufficientBalance": "Insufficient {{symbol}} balance: {{balance}} < {{required}}",
+    "insufficientGas": "Insufficient {{token}} balance for gas fee. Please add {{token}} to your wallet to pay for transaction fees.",
+    "lowGas": "Low {{token}} balance. Transaction may fail due to insufficient gas. Please ensure you have enough {{token}} to pay for transaction fees."
+  }
+}
+

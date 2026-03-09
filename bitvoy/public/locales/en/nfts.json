@@ -1,0 +1,36 @@
+{
+  "banner": {
+    "title": "NFTs",
+    "mainWallet": "Main Wallet"
+  },
+  "actions": {
+    "signOut": "Sign Out",
+    "import": "Import NFT",
+    "mint": "Mint NFT",
+    "send": "Send",
+    "next": "Next",
+    "back": "Back",
+    "scan": "Scan",
+    "copy": "Copy"
+  },
+  "list": {
+    "title": "NFTs"
+  },
+  "detail": {
+    "title": "Detail",
+    "name": "Name",
+    "chain": "Chain",
+    "contract": "Contract Address",
+    "tokenId": "Token Id",
+    "creator": "Creator",
+    "attributes": "Attributes"
+  },
+  "sendForm": {
+    "addressPlaceholder": "Address"
+  },
+  "importForm": {
+    "addressPlaceholder": "Address",
+    "collectibleIdPlaceholder": "Collectible Id"
+  }
+}
+

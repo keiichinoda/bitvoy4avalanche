@@ -1,0 +1,105 @@
+/* ============================================
+ * coins.css 変更後（coins-プレフィックス追加版）
+ * ============================================ */
+
+/* ウォレットアイコンのスタイリング */
+.coins-wallet-icon {
+	width: 50px;
+}
+
+/* 通貨アイコンのスタイリング */
+.coins-coin-icon {
+	font-size: 1.2em;
+	margin-right: 8px;
+	display: inline-block;
+	vertical-align: middle;
+}
+
+/* SVGアイコンのスタイリング */
+.coins-coin-icon-img {
+	width: 1.2em;
+	height: 1.2em;
+	vertical-align: middle;
+	display: inline-block;
+	margin-right: 8px;
+}
+
+/* テーブルのスタイリング改善 */
+.coins-table-wrapper table {
+	width: 100%;
+	border-collapse: collapse;
+}
+
+.coins-table-wrapper th,
+.coins-table-wrapper td {
+	padding: 12px 8px;
+	text-align: left;
+	border-bottom: 1px solid #ddd;
+}
+
+.coins-table-wrapper th {
+	background-color: #2c3e50;
+	color: white;
+	font-weight: bold;
+}
+
+/* ホバー効果を削除 */
+/* .coins-table-wrapper tr:hover {
+	background-color: #f9f9f9;
+} */
+
+/* グローバルリセットは削除（main.cssの定義を使用） */
+/* *, *:before, *:after { box-sizing: border-box; } */
+/* html, body { margin: 0; padding: 0; height: 100%; font-family: sans-serif; } */
+
+/* QRリーダーのスタイリング */
+.coins-qrreader {
+	width: 100%;
+	position: relative;
+	aspect-ratio: 1 / 1;
+	max-width: 100%;
+}
+
+.coins-qrreader-video {
+	background-color: #000;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	display: block;
+	transform: scaleX(-1); /* 左右反転（ミラー表示） */
+}
+
+.coins-modal-overlay {
+	display: none;
+	position: fixed;
+	justify-content: center;
+	align-items: center;
+	top: 0;
+	left: 0;
+	width: 100vw;
+	height: 100%;
+	background-color: rgba(0, 0, 0, .7);
+}
+
+.coins-modal-overlay.is-show {
+	display: flex;
+}
+
+.coins-wrap-canvas {
+	display: none;
+}
+
+.coins-qrpadding {
+	padding: 8px;
+	background-color: #fff;
+}
+
+/* Network Selector Styles */
+#network-selector {
+	margin-right: 15px;
+	padding: 5px;
+	border-radius: 4px;
+	border: 1px solid #ccc;
+	max-width: 100px;
+	width: 100px;
+}

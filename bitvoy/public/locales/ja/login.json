@@ -1,0 +1,12 @@
+{
+  "wallet": {
+    "title": "🔐 BitVoy 認証",
+    "authRequired": "認証が必要です",
+    "authMessage": "クライアントアプリケーションからの認証リクエストを受信しました。続行するには、BitVoy ウォレットでパスキー認証を行ってください。",
+    "startPasskeyAuth": "🔐 パスキー認証を開始",
+    "authenticating": "パスキー認証中...",
+    "authSuccess": "認証成功",
+    "authFailed": "認証失敗",
+    "authCanceled": "認証キャンセル"
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "name": "bitvoy-aa",
+  "version": "1.0.0",
+  "private": true,
+  "description": "BitVoy Account Abstraction contracts (Factory and Smart Account)",
+  "scripts": {
+    "compile": "hardhat compile",
+    "test": "hardhat test",
+    "get-op-signer-address": "node scripts/getOpSignerAddress.js",
+    "deploy:factory:amoy": "hardhat run scripts/deployFactory.js --network polygon_amoy",
+    "deploy:factory:polygon": "hardhat run scripts/deployFactory.js --network polygon",
+    "deploy:factory-v2:amoy": "hardhat run scripts/deployFactoryV2.js --network polygon_amoy",
+    "deploy:factory-v2:polygon": "hardhat run scripts/deployFactoryV2.js --network polygon",
+    "deploy:paymaster:amoy": "hardhat run scripts/deployBitVoyPaymaster.js --network polygon_amoy",
+    "deploy:paymaster:polygon": "hardhat run scripts/deployBitVoyPaymaster.js --network polygon"
+  },
+  "devDependencies": {
+    "@account-abstraction/contracts": "^0.6.0",
+    "@nomiclabs/hardhat-ethers": "^2.2.3",
+    "@nomiclabs/hardhat-etherscan": "^3.1.8",
+    "@openzeppelin/contracts": "^5.0.0",
+    "dotenv": "^16.4.0",
+    "ethers": "^5.7.2",
+    "hardhat": "^2.22.0",
+    "hardhat-gas-reporter": "^1.0.10",
+    "solidity-coverage": "^0.8.11"
+  }
+}
+

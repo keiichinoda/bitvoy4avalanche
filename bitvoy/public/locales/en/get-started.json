@@ -1,0 +1,9 @@
+{
+  "getStarted": {
+    "title": "🔐 BitVoy Account Creation",
+    "required": "Account Creation Required",
+    "message": "To complete authentication, you need to create a BitVoy account first. Click the button below to start the account creation process.",
+    "createAccount": "Create BitVoy Account",
+    "cancel": "Cancel"
+  }
+}

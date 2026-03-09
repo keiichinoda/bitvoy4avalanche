@@ -1,0 +1,112 @@
+{
+  "pageTitle": "BitVoy - From a Bit to a Voyage",
+  "hero": {
+    "tagline": "From a Bit to a Voyage.",
+    "title": "That Small Step Becomes a Global Voyage.",
+    "lead": "Pack your smartphone. Your adventure begins now. BitVoy is your portal to a new economic adventure. We connect you to real-world projects across the globe—safely, intuitively, and without the boring finance talk.",
+    "note": "BitVoy is not a financial investment product. It is a participation platform for your life's journey.",
+    "ctaPrimary": "Start Your Adventure",
+    "ctaSecondary": "How it works"
+  },
+  "vision": {
+    "title": "Vision",
+    "subtitle": "Say Goodbye to Boring Numbers.",
+    "body": "BitVoy transforms the locked gate of \"scary finance\" into an open portal for adventure. We invite you to take that first small step (Bit) and join a global guild of explorers on a shared journey (Voyage) through real-world ventures."
+  },
+  "why": {
+    "title": "Why BitVoy",
+    "subtitle": "Travel Far, Travel Safe.",
+    "lead": "We turn \"hard and scary\" into \"safe and intuitive\" so you can focus on the adventure ahead.",
+    "items": {
+      "shield": {
+        "title": "Equip the Ultimate Shield",
+        "body": "A security model built for real life. We cover human mistakes—loss, change, and recovery—so you can explore without fear."
+      },
+      "magic": {
+        "title": "Start Like Magic",
+        "body": "No heavy armor required. Skip the confusing installations and setups. dive into the world of Web3 as easily as browsing your favorite website."
+      },
+      "hero": {
+        "title": "Be the Hero, Not a Spectator",
+        "body": "Don't just watch the charts. Connect with real projects and communities. Your involvement allows you to become part of the story."
+      },
+      "allies": {
+        "title": "New Allies, New Horizons",
+        "body": "As our alliance of partners grows, so does your map. Your benefits and experiences expand with every new partnership we forge."
+      }
+    }
+  },
+  "what": {
+    "title": "What You Can Do",
+    "items": {
+      "pay": {
+        "title": "Pay & Send",
+        "subtitle": "Make Every Transaction a Breeze.",
+        "body": "Seamless QR payments and transfers that feel as natural as a handshake."
+      },
+      "participate": {
+        "title": "Participate",
+        "subtitle": "High-Five the World.",
+        "body": "Get closer to global ventures and Real-World Assets (RWA). Touch the projects you support."
+      },
+      "belong": {
+        "title": "Belong",
+        "subtitle": "Join the Guild.",
+        "body": "Unlock membership benefits that make your journey deeper, richer, and more rewarding."
+      }
+    }
+  },
+  "founder": {
+    "title": "Founder Membership",
+    "subtitle": "A Passport for the Journey.",
+    "lead": "This is not a financial product. It is your key to the future.",
+    "body": "The Founder Membership is an exclusive pass designed for early explorers. It's not about chasing yields; it's about accessing unique experiences, priority lanes, and real-world privileges.",
+    "bullets": {
+      "gear": "Gear Up for Less: Fee discounts and priority access to new features.",
+      "quests": "Secret Quests & Early Drops: Unlock Founder-only experiences and be the first to receive \"supply drops\" from partners.",
+      "perks": "Real-World Perks (RWA):\nUse your digital key to unlock access to rare trading cards, unique creator works,\nand entertainment experiences across Japan and around the world.",
+      "legacy": "Wear Your Legacy: Exclusive badges and titles that prove you were here from the start.",
+      "voting": "Voting Power: Hold the compass. Have a say in where our journey goes next."
+    },
+    "ctaPrimary": "Become a Founder",
+    "ctaSecondary": "Read FAQ"
+  },
+  "how": {
+    "title": "How It Works",
+    "steps": {
+      "1": {
+        "title": "1) Begin Your Saga",
+        "body": "Create your account in seconds. Start safely with zero prior knowledge."
+      },
+      "2": {
+        "title": "2) Explore the Map",
+        "body": "One identity for everything. Pay, swap, and access partner experiences seamlessly."
+      },
+      "3": {
+        "title": "3) Level Up Together",
+        "body": "Stay involved. As the ecosystem expands, your journey evolves with new rewards and discoveries."
+      }
+    }
+  },
+  "faq": {
+    "title": "FAQ",
+    "q1": {
+      "q": "Is BitVoy an investment product?",
+      "a": "No. BitVoy is a participation platform for adventurers. We do not offer profits, yields, or ROI. We offer experiences and access."
+    },
+    "q2": {
+      "q": "What is Founder Membership?",
+      "a": "It is a \"First-Class Passport\" for early supporters, focusing on ecosystem benefits, community status, and exclusive access."
+    },
+    "q3": {
+      "q": "What does \"Bit Voyage\" mean?",
+      "a": "It signifies a small first step (Bit) that turns into a grand shared journey (Voyage) through global ventures and experiences."
+    }
+  },
+  "cta": {
+    "title": "The Map is Open. Your Ship Awaits.",
+    "lead": "Take your first small step—safely, intuitively, and boldly.",
+    "button": "Start Your Adventure"
+  }
+}
+

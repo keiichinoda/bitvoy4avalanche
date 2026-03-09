@@ -1,0 +1,58 @@
+{
+  "title": "スワップ",
+  "subtitle": "トークンの交換・トレード",
+  "crosschainButton": "クロスチェーンスワップ",
+  "from": {
+    "label": "送信トークン",
+    "placeholder": "トークンを選択",
+    "amount": "数量",
+    "balance": "残高"
+  },
+  "to": {
+    "label": "受信トークン",
+    "placeholder": "トークンを選択",
+    "estimated": "DEX見積額（総額）",
+    "fee": "BitVoy手数料",
+    "receive": "受取額（純額）"
+  },
+  "swapTokens": "トークンスワップ",
+  "reverseTokens": "トークンを入れ替え",
+  "chain": {
+    "label": "送受信チェーン",
+    "placeholder": "チェーンを選択"
+  },
+  "actions": {
+    "preview": "プレビュー",
+    "swap": "スワップ",
+    "max": "最大",
+    "reverse": "⇄"
+  },
+  "quote": {
+    "route": "ルート",
+    "priceImpact": "価格インパクト",
+    "feeBps": "手数料",
+    "gross": "総額",
+    "net": "純額"
+  },
+  "errors": {
+    "selectTokens": "送信と受信のトークンを選択してください",
+    "sameToken": "送信と受信のトークンは異なる必要があります",
+    "invalidAmount": "有効な数量を入力してください",
+    "invalidSelection": "無効なトークン選択です",
+    "crossChain": "クロスチェーンスワップはサポートされていません。同じチェーンのトークンを選択してください。",
+    "noWallet": "ウォレットアドレスが見つかりません。まずウォレットを作成してください。",
+    "quoteFailed": "見積りの取得に失敗しました",
+    "swapFailed": "スワップに失敗しました",
+    "balanceError": "残高の読み込みエラー",
+    "maxBalanceError": "残高の取得に失敗しました"
+  },
+  "success": {
+    "swapCompleted": "スワップが正常に完了しました！",
+    "transaction": "トランザクション"
+  },
+  "network": {
+    "mainnet": "メインネット",
+    "testnet": "テストネット"
+  }
+}
+

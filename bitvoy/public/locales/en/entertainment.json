@@ -1,0 +1,19 @@
+{
+  "banner": {
+    "title": "Entertainment",
+    "lead": "Explore Entertainment with Crypto.",
+    "desc": "Unlock fun experiences and enjoy a new world of entertainment powered by cryptocurrency."
+  },
+  "sections": {
+    "gacha": {
+      "title": "Gacha",
+      "body": "Gacha, a Japanese term, refers to a capsule-toy vending machine or a random item-drawing system, popular in games and collectibles. Experience the thrill of Gacha! A unique system where you receive a surprise item, from trading cards to figures.",
+      "cta": "Learn more"
+    },
+    "more": {
+      "title": "More",
+      "body": "We’re starting with Gacha, but this is just the beginning! Get ready for an exciting future as we expand into diverse forms of entertainment and bring even more fun and surprises your way. Stay tuned for what’s to come!"
+    }
+  }
+}
+

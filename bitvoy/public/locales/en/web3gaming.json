@@ -1,0 +1,19 @@
+{
+  "banner": {
+    "title": "Web3 Gaming",
+    "lead": "Play in the Web3 World.",
+    "desc": "Experience next-level gaming powered by blockchain technology and cryptocurrency. Dive into the future of entertainment!"
+  },
+  "sections": {
+    "connect": {
+      "title": "Connect Wallet with Web3",
+      "body": "Connect your BitVoy Wallet with Web3 games seamlessly using TON Connect and step into a world of next-generation gaming! With BitVoy Wallet, you can unlock the full potential of Web3 games, offering features like true ownership of in-game assets, blockchain-based rewards, and secure, decentralized gameplay experiences. Enjoy enhanced interactivity and transparency while managing your crypto assets effortlessly. TON Connect ensures a smooth and secure integration, allowing you to focus on the fun and innovation that Web3 gaming has to offer. Explore, play, and earn in a gaming ecosystem designed for the future!",
+      "cta": "About Bitvoy"
+    },
+    "coming": {
+      "title": "Exciting Updates Coming Soon!",
+      "body": "In the near future, you will be able to shop for a wide range of products and services using cryptocurrency. Site information will be updated and added gradually. Stay tuned and look forward to it!"
+    }
+  }
+}
+

@@ -1,0 +1,149 @@
+{
+  "pageTitle": "Affiliates - BitVoy Wallet",
+  "menu": "Menu",
+  "languageSelector": {
+    "label": "Language",
+    "title": "Select Language"
+  },
+  "banner": {
+    "title": "BitVoy Affiliate Program",
+    "desc": "Earn rewards by introducing BitVoy services and Membership."
+  },
+  "sections": {
+    "intro": {
+      "title": "Introduction",
+      "body": "The BitVoy Affiliate Program is a system where you can earn rewards by introducing BitVoy services and Membership. Even if you're not familiar with cryptocurrencies or NFTs, sharing BitVoy's philosophy and experience can lead to valuable referrals."
+    },
+    "features": {
+      "title": "Features of BitVoy Affiliate Program",
+      "points": {
+        "notInvestment": {
+          "title": "✓ Not an investment or MLM",
+          "items": [
+            "No guaranteed returns or profit promises",
+            "Not a pyramid scheme or investment model",
+            "Pure 'referral-based affiliate' program"
+          ]
+        },
+        "sustainable": {
+          "title": "✓ Sustainable long-term",
+          "items": [
+            "Not just a one-time referral",
+            "Referral value grows with BitVoy's growth",
+            "Linked with Membership system"
+          ]
+        }
+      }
+    },
+    "whatToRefer": {
+      "title": "What to Refer?",
+      "mainTargets": "Main Referral Targets",
+      "targets": [
+        "BitVoy Wallet",
+        "BitVoy Membership (Founder Membership)",
+        "Various services provided or partnered by BitVoy"
+      ],
+      "importantPoint": {
+        "title": "Important Referral Point",
+        "body": "👉 Founder NFT = Membership Participation Certificate",
+        "note": "Please introduce it as a guide to Membership participation, not as 'selling' NFTs."
+      }
+    },
+    "rewardSystem": {
+      "title": "How Rewards Are Generated",
+      "structure": "Basic Structure",
+      "flow": [
+        "Your referral link",
+        "User registration and usage",
+        "Use or purchase of target services",
+        "Rewards generated based on results"
+      ],
+      "examples": "Examples of Eligible Results",
+      "examplesList": [
+        "Founder Membership participation",
+        "Use of target services",
+        "Campaign target actions"
+      ],
+      "note": "※ Reward conditions and targets may change."
+    },
+    "membershipAffiliate": {
+      "title": "Membership × Affiliate Relationship",
+      "body": "Having Founder Membership may...",
+      "benefits": [
+        "Affiliate reward rates may be boosted",
+        "Access to exclusive campaigns may be granted"
+      ],
+      "note": "👉 The more you participate in Membership as a referrer, the more advantageous it becomes"
+    },
+    "recommendedExplanations": {
+      "title": "Recommended Explanation Examples (Important)",
+      "ok": {
+        "title": "OK Explanations",
+        "examples": [
+          "\"BitVoy is a new wallet service that works instantly without requiring an app\"",
+          "\"Founder NFT is like a participation certificate\"",
+          "\"The more you use it, the more benefits expand\""
+        ]
+      },
+      "ng": {
+        "title": "NG Explanations (Prohibited)",
+        "examples": [
+          "\"It makes money\" / \"It will increase in value\"",
+          "\"You'll profit if you buy it\"",
+          "\"Passive income\" / \"Investment opportunity\""
+        ],
+        "note": "👉 Expressions that cause misunderstanding are prohibited."
+      }
+    },
+    "rewardReceipt": {
+      "title": "About Receiving Rewards",
+      "points": [
+        "Rewards are managed linked to your BitVoy account",
+        "Payment methods and currencies differ by campaign",
+        "Withdrawal and usage become available when certain conditions are met"
+      ],
+      "note": "※ Details can be confirmed in the management screen."
+    },
+    "targetAudience": {
+      "title": "Who This Is For",
+      "audiences": [
+        "Those who like to introduce next-generation wallets and new payment services",
+        "Those interested in building communities",
+        "Those who want to support long-term services",
+        "Those who want to introduce based on experience, even without knowledge"
+      ]
+    },
+    "faq": {
+      "title": "Frequently Asked Questions (For Affiliates)",
+      "q1": {
+        "q": "Q. Are there any initial costs?",
+        "a": "A. No. Registration is free."
+      },
+      "q2": {
+        "q": "Q. Can I refer without joining Membership?",
+        "a": "A. Yes, it's possible. However, participating in Membership may increase benefits."
+      },
+      "q3": {
+        "q": "Q. Can I refer to people who don't have an account?",
+        "a": "A. Of course it's possible. Please guide them as a way to participate in Membership."
+      }
+    },
+    "conclusion": {
+      "title": "Finally",
+      "body": "The BitVoy Affiliate Program is a system that values 'spreaders' rather than 'sellers'. Please share BitVoy's worldview and experience in your own words."
+    },
+    "cta": {
+      "startAffiliate": "Start Affiliate",
+      "viewMembership": "View Membership"
+    },
+    "disclaimer": {
+      "title": "⚠️ Important Notes (Required Display)",
+      "points": [
+        "This program is not an investment product",
+        "It does not guarantee profits or results",
+        "Terms and conditions may change without notice"
+      ]
+    }
+  }
+}
+

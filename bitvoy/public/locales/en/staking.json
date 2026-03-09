@@ -1,0 +1,22 @@
+{
+  "banner": {
+    "title": "Staking Pools",
+    "lead": "Earn Rewards with Crypto.",
+    "desc": "Secure and grow your assets through staking."
+  },
+  "sections": {
+    "moringaOkinawa": {
+      "title": "Moringa (Okinawa, Japan)",
+      "cta": "Learn more"
+    },
+    "moringaMyanmar": {
+      "title": "Moringa (Natmouk village, Myammer)",
+      "cta": "Learn more"
+    },
+    "hempIndia": {
+      "title": "Hemp (Uttarakhand, India)",
+      "cta": "Learn more"
+    }
+  }
+}
+

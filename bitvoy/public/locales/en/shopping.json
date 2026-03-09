@@ -1,0 +1,29 @@
+{
+  "banner": {
+    "title": "Shopping",
+    "lead": "Shop with crypto.",
+    "desc": "Offering attractive products for crypto users."
+  },
+  "sections": {
+    "carbon": {
+      "title": "Carbon Credit Gift",
+      "body": "Gift for the future! Change tomorrow with the gift of carbon credits. Give an eco-friendly gift with a carbon credit gift. Make your precious moments special and sustainable!",
+      "cta": "Learn more"
+    },
+    "tcg": {
+      "title": "TCG",
+      "body": "TCGs such as Pokemon, One Piece, and Magic the Gathering have rare cards, and cards that are traded at high prices can make you feel good just by owning them.",
+      "cta": "Learn more"
+    },
+    "figures": {
+      "title": "Figures",
+      "body": "Figures offer beauty, intricate detail, and a tangible connection to favorite characters or memories. They are collectible, customizable, and allow creative displays. As artistic pieces, they enhance spaces and express personal interests. Limited editions may hold investment value, making figures not just hobbies, but a meaningful way to celebrate art and storytelling.",
+      "cta": "Learn more"
+    },
+    "coming": {
+      "title": "Exciting Updates Coming Soon!",
+      "body": "In the near future, you will be able to shop for a wide range of products and services using cryptocurrency. Site information will be updated and added gradually. Stay tuned and look forward to it!"
+    }
+  }
+}
+

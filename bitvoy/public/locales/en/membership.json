@@ -1,0 +1,167 @@
+{
+  "pageTitle": "Membership - BitVoy Wallet",
+  "menu": "Menu",
+  "banner": {
+    "title": "Membership",
+    "desc": "BitVoy, more freely. A membership system where the more you participate, the more value expands."
+  },
+  "actions": {
+    "signOut": "Log Out",
+    "join": "Join",
+    "upgrade": "Upgrade",
+    "downgrade": "Downgrade",
+    "cancel": "Cancel",
+    "save": "Save"
+  },
+  "plan": {
+    "current": "Current Plan",
+    "nextBilling": "Next Billing",
+    "status": "Status"
+  },
+  "forms": {
+    "email": "Email",
+    "name": "Name",
+    "submit": "Submit"
+  },
+  "founderTiers": {
+    "diamond": {
+      "title": "🟦 Diamond Founder",
+      "catch": "<strong>The Ultimate Seat at BitVoy</strong>",
+      "description": "Diamond Founder is the <strong>highest tier</strong> of the Founder Membership.<br><br>Experience the growth of BitVoy from the closest position and receive <strong>maximum access</strong> to all benefits and privileges.",
+      "benefitsTitle": "Main Benefits",
+      "benefit1Title": "Top-priority access to exclusive events",
+      "benefit1Description": "Top-priority access to exclusive events provides opportunities for special secret experiences.",
+      "benefit2Title": "Fee discounts (BVC cashback): Maximum",
+      "benefit2Description": "BVC cashback is applied at the maximum level for transactions and payments.",
+      "benefit3Title": "Founder-exclusive gacha (top-tier draw pool)",
+      "benefit3Description": "Access to the top-tier draw pool within the Founder-exclusive gacha.",
+      "benefit4Title": "Airdrops: Maximum",
+      "benefit4Description": "For BitVoy tokens and airdrops, you are prioritized at the maximum allocation level.",
+      "benefit5Title": "Real-World Asset (RWA) benefits: Top priority",
+      "benefit5Description": "For RWA benefits such as trading cards, events, and experiences, top-priority listing on markets and wanted lists is provided.",
+      "benefit6Title": "Voting rights on project direction and partners: Maximum",
+      "benefit6Description": "In votes regarding project direction and partner selection, you can participate with the highest level of influence.",
+      "benefit7Title": "Exclusive Diamond title and badge display",
+      "benefit7Description": "Diamond Founder-exclusive titles and badges are displayed on your profile, marketplace, and in the community.",
+      "recommendedTitle": "Recommended For",
+      "recommended1": "Those who want to use BitVoy as a core service",
+      "recommended2": "Those who don't want to miss any benefits or priority access"
+    },
+    "platinum": {
+      "title": "🟪 Platinum Founder",
+      "catch": "<strong>A Well-Balanced Premium Membership</strong>",
+      "description": "Platinum Founder is a <strong>premium tier</strong> that balances strong benefits with accessibility.<br><br>Enjoy core Founder benefits while experiencing the evolution of BitVoy over the long term.",
+      "benefitsTitle": "Main Benefits",
+      "benefit1Title": "High-priority access to exclusive events",
+      "benefit1Description": "High-priority access to exclusive events provides special experience opportunities with preferential conditions over general participation slots.",
+      "benefit2Title": "Fee discounts (BVC cashback): High level",
+      "benefit2Description": "BVC cashback is applied at a high level for transactions and payments.",
+      "benefit3Title": "Founder-exclusive gacha (high-tier draw pool)",
+      "benefit3Description": "Access to the high-tier draw pool within the Founder-exclusive gacha.",
+      "benefit4Title": "Airdrops: High allocation",
+      "benefit4Description": "For BitVoy tokens and airdrops, you are eligible at a preferential high allocation level.",
+      "benefit5Title": "Real-World Asset (RWA) benefits: Special priority",
+      "benefit5Description": "For RWA benefits such as trading cards, events, and experiences, special priority listing on markets and wanted lists is provided.",
+      "benefit6Title": "Voting rights on project direction and partners: Extended",
+      "benefit6Description": "In votes regarding project direction and partner selection, you can participate with extended influence.",
+      "benefit7Title": "Exclusive Platinum title and badge display",
+      "benefit7Description": "Platinum Founder-exclusive titles and badges are displayed on your profile, marketplace, and in the community.",
+      "recommendedTitle": "Recommended For",
+      "recommended1": "Those who value a balance between usability and benefits",
+      "recommended2": "Those who want to enjoy Founder benefits without pressure"
+    },
+    "aurora": {
+      "title": "🟨 Aurora Founder",
+      "catch": "<strong>An Entry Founder to Experience BitVoy Early</strong>",
+      "description": "Aurora Founder is the <strong>standard tier</strong> of the Founder Membership.<br><br>Receive early member benefits while experiencing BitVoy's services <strong>step by step</strong>.",
+      "benefitsTitle": "Main Benefits",
+      "benefit1Title": "Priority access to exclusive events",
+      "benefit1Description": "Priority access to exclusive events provides participation opportunities with preferential conditions over general participation.",
+      "benefit2Title": "Fee discounts (BVC cashback): Preferential",
+      "benefit2Description": "BVC cashback is applied under preferential conditions for transactions and payments.",
+      "benefit3Title": "Founder-exclusive gacha (priority draw pool)",
+      "benefit3Description": "Access to the priority draw pool of the Founder-exclusive gacha.",
+      "benefit4Title": "Airdrops: Priority allocation",
+      "benefit4Description": "For BitVoy tokens and airdrops, you are eligible for priority allocation.",
+      "benefit5Title": "Real-World Asset (RWA) benefits: Priority",
+      "benefit5Description": "For RWA benefits such as trading cards, events, and experiences, priority listing on markets and wanted lists is provided.",
+      "benefit6Title": "Voting rights on project direction and partners: Granted",
+      "benefit6Description": "You can participate in votes regarding project direction and partner selection.",
+      "benefit7Title": "Exclusive Aurora title and badge display",
+      "benefit7Description": "Aurora Founder-exclusive titles and badges are displayed on your profile, marketplace, and in the community.",
+      "recommendedTitle": "Recommended For",
+      "recommended1": "Those who want to join as a Founder",
+      "recommended2": "Those who want to try the Membership first"
+    },
+    "crystal": {
+      "title": "🟩 Crystal Founder",
+      "catch": "<strong>The Most Accessible Founder Membership</strong>",
+      "description": "Crystal Founder is an <strong>entry-level tier</strong> for those joining BitVoy Membership for the first time.<br><br>Join easily and enjoy Founder-exclusive experiences and benefits <strong>without pressure</strong>.",
+      "benefitsTitle": "Main Benefits",
+      "benefit1Title": "Access to exclusive events",
+      "benefit1Description": "Participation opportunities for exclusive events are provided.",
+      "benefit2Title": "Fee discounts (BVC cashback): Applied",
+      "benefit2Description": "BVC cashback is applied for transactions and payments.",
+      "benefit3Title": "Founder-exclusive gacha (participation draw pool)",
+      "benefit3Description": "Access to the participation draw pool of the Founder-exclusive gacha.",
+      "benefit4Title": "Airdrops: Allocation eligible",
+      "benefit4Description": "You are eligible for distribution of BitVoy tokens and airdrops.",
+      "benefit5Title": "Real-World Asset (RWA) benefits: Priority eligible",
+      "benefit5Description": "For RWA benefits such as trading cards, events, and experiences, you are listed on markets and wanted lists as a Founder slot.",
+      "benefit6Title": "Voting rights on project direction and partners: Eligible",
+      "benefit6Description": "You are eligible to participate in votes regarding project direction and partner selection.",
+      "benefit7Title": "Exclusive Crystal title and badge display",
+      "benefit7Description": "Crystal Founder-exclusive titles and badges are displayed on your profile, marketplace, and in the community.",
+      "recommendedTitle": "Recommended For",
+      "recommended1": "Those who want to join while observing first",
+      "recommended2": "Those who want to try the Membership"
+    }
+  },
+  "sections": {
+    "whatIs": {
+      "title": "What is Founder Membership?",
+      "description": "A participatory membership system where you can receive benefits, priority rights, and exclusive experiences in BitVoy Wallet, marketplace, and partner services. A Founder NFT is issued as a participation certificate.",
+      "currentStatus": "Current Status",
+      "statusText": "<strong>Current Status: Regular User</strong><br/>Benefits will be unlocked gradually when you join."
+    },
+    "benefits": {
+      "title": "Examples of Membership Benefits",
+      "benefit1": "Discounts on various fees within BitVoy",
+      "benefit2": "Access to Founder / Member exclusive content",
+      "benefit3": "Exclusive gacha and priority purchase slots",
+      "benefit4": "Boost for referral and affiliate benefits",
+      "benefit5": "Special treatment at partner services",
+      "note": "※ Benefit contents vary by Membership rank."
+    },
+    "howToJoin": {
+      "title": "How to Join",
+      "description": "BitVoy Membership is <strong>activated by obtaining a Founder NFT</strong>. A Founder NFT is a participation certificate for Membership and a digital proof to receive benefits. It is a Membership NFT that represents rights and benefits related to service use, not an investment product."
+    },
+    "chooseFounder": {
+      "title": "Choose Your Founder Membership",
+      "description": "The benefits and experiences you receive differ depending on the rank you join.",
+      "button": "View Founder Rank List"
+    },
+    "faq": {
+      "title": "Answers to Common Concerns",
+      "q1": "Will benefits increase in the future? → Yes. They will be added as BitVoy grows.",
+      "q2": "What happens if I stop using it? → Benefits can be checked and used at any time.",
+      "q3": "Is it okay if I'm not familiar with NFTs? → BitVoy will support purchase and management.",
+      "button": "Join Membership",
+      "note": "※ A Founder NFT will be issued. ※ There is a limit on the number issued for each rank."
+    },
+    "ranks": {
+      "title": "Founder Membership Rank List",
+      "subtitle": "Founder NFTs are not investment products, but participation certificates that activate various BitVoy benefits."
+    },
+    "cta": {
+      "title": "Choose the Founder Membership That Suits You",
+      "buttonDiamond": "Join Diamond Founder",
+      "buttonPlatinum": "Join Platinum Founder",
+      "buttonAurora": "Join Aurora Founder",
+      "buttonCrystal": "Join Crystal Founder",
+      "note": "※ A Founder NFT will be issued / There is a limit on the number issued for each rank"
+    }
+  }
+}
+

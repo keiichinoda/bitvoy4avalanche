@@ -1,0 +1,59 @@
+{
+  "title": "Cross-chain Swap",
+  "subtitle": "Swap Tokens Across Chains",
+  "samechainButton": "Same-chain Swap",
+  "from": {
+    "chain": "From Chain",
+    "chainPlaceholder": "Select Chain",
+    "token": "From Token",
+    "tokenPlaceholder": "Select Token",
+    "amount": "Amount",
+    "balance": "Balance"
+  },
+  "to": {
+    "chain": "To Chain",
+    "chainPlaceholder": "Select Chain",
+    "token": "To Token",
+    "tokenPlaceholder": "Select Token"
+  },
+  "crosschainSwapTokens": "Cross-chain Swap Tokens",
+  "reverseTokens": "Reverse tokens",
+  "actions": {
+    "preview": "Preview",
+    "swap": "Swap",
+    "max": "Max",
+    "reverse": "⇄"
+  },
+  "quote": {
+    "youSend": "You Send (From)",
+    "bitvoyFee": "BitVoy Fee",
+    "bridgedAmount": "Bridged Amount",
+    "estimatedReceived": "Estimated Received (To)",
+    "minimumReceived": "Minimum Received",
+    "bridge": "Bridge",
+    "dex": "DEX",
+    "estimatedTime": "Estimated Time"
+  },
+  "errors": {
+    "selectChains": "Please select both From and To chains",
+    "selectTokens": "Please select both From and To tokens",
+    "sameChain": "From and To chains must be different",
+    "sameToken": "From and To tokens must be different",
+    "invalidAmount": "Please enter a valid amount",
+    "invalidSelection": "Invalid selection",
+    "noWallet": "No wallet address found. Please create a wallet first.",
+    "quoteFailed": "Failed to get quote",
+    "swapFailed": "Swap failed",
+    "balanceError": "Error loading balance",
+    "maxBalanceError": "Failed to get balance"
+  },
+  "success": {
+    "swapCompleted": "Cross-chain swap completed successfully!",
+    "transaction": "Transaction"
+  },
+  "network": {
+    "mainnet": "Mainnet",
+    "testnet": "Testnet"
+  }
+}
+

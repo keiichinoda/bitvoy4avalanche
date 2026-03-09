@@ -1,0 +1,1582 @@
+<html>
+<head>
+<!--
+	Forty by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+	<title data-i18n-title="common.title">BitVoY Wallet</title>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<!-- CSP設定: ドメイン固有の制限はサーバー側 Helmet ヘッダーで管理。meta タグは基本制限のみ -->
+	<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-eval' 'wasm-unsafe-eval' blob:; style-src 'self' 'unsafe-inline'; font-src 'self'; img-src 'self' data:; connect-src 'self' blob: data: https: wss: ws://localhost:*; worker-src 'self' blob:;">
+	<link rel="manifest" href="/manifest.webmanifest">
+	<link rel="icon" href="/icons/icon-192.png">
+	<link rel="apple-touch-icon" href="/icons/icon-192.png">
+	<meta name="theme-color" content="#0A74EB">
+
+	<link rel="stylesheet" href="/css/main.css" />
+	<link rel="stylesheet" href="/css/coins.css" />
+	<link rel="stylesheet" href="/css/nfts.css" />
+	<link rel="stylesheet" href="/css/swap.css" />
+	<link rel="stylesheet" href="/css/crosschain.css" />
+	<noscript>
+		<link rel="stylesheet" href="/css/noscript.css" />
+	</noscript>
+	<style>
+		/* 簡易オーバーレイCSS（必要に応じて調整） */
+		#overlay-inapp-warning,
+		#overlay-android-guide {
+		  position: fixed;
+		  inset: 0;
+		  z-index: 9999;
+		}
+		.overlay-backdrop {
+		  position: absolute;
+		  inset: 0;
+		  background: rgba(0, 0, 0, 0.4);
+		}
+		.overlay-content {
+		  position: absolute;
+		  max-width: 320px;
+		  width: 90%;
+		  top: 50%;
+		  left: 50%;
+		  transform: translate(-50%, -50%);
+		  background: #fff;
+		  border-radius: 12px;
+		  padding: 16px 20px;
+		  box-shadow: 0 4px 16px rgba(0,0,0,0.3);
+		  font-size: 14px;
+		}
+		.overlay-content h3 {
+		  margin-top: 0;
+		  margin-bottom: 8px;
+		  font-size: 16px;
+		}
+		.overlay-content button {
+		  margin-top: 12px;
+		  padding: 6px 12px;
+		}
+		.top-section-margin {
+			margin-top: 0px !important;
+			margin-bottom: 0px !important;
+			padding-top: 0px !important;
+			padding-bottom: 0px !important;
+			border-top: none !important;
+		}
+		#topmarket td  {
+			padding: 0.4em 0.75em !important;
+		}
+	  </style>
+</head>
+<body class="is-preload">
+
+	<!-- Wrapper -->
+	<div id="wrapper">
+
+		<!-- Header -->
+		<header id="header" class="alt">
+			<a href="#home" class="logo"><strong>BitVoY</strong> <span data-i18n="brand.wallet">Wallet</span></a>
+			<nav>
+				<a href="#menu" data-i18n="nav.menu">Menu</a>
+			</nav>
+		</header>
+
+		<!-- Menu -->
+		<nav id="menu">
+			<ul class="links">
+				<li><a href="#home" data-i18n="nav.home">Home</a></li>
+				<li><a href="#coins" data-i18n="nav.coins">Coins</a></li>
+				<li><a href="https://member.bitvoy.net/" data-i18n="nav.membership">Membership</a></li>
+				<li><a href="pickup.html" data-i18n="nav.featured">Featured</a></li>
+				<li><a href="#swap" data-i18n="nav.swap">Swap</a></li>
+				<li><a href="#nfts" data-i18n="nav.nfts">NFTs</a></li>
+				<li><a href="affiliates.html" data-i18n="nav.affiliates">Affiliates</a></li>
+			</ul>
+			<ul class="links">
+				<li><a href="#" data-action="openWalletConnect" data-i18n="nav.walletconnect">WalletConnect</a></li>
+			</ul>
+			<ul class="links">
+				<li>
+					<label for="menu-language-selector" style="display: none;">Language</label>
+					<select id="menu-language-selector" title="Select Language" aria-label="Select Language" style="background: rgba(255, 255, 255, 0.075); border: 1px solid rgba(255, 255, 255, 0.15); color: rgba(255, 255, 255, 0.7); padding: 0.5em 1em; border-radius: 4px; width: 100%;">
+						<option value="en">English</option>
+						<option value="ja">日本語</option>
+					</select>
+				</li>
+			</ul>
+			<ul class="actions stacked">
+				<li><a href="javascript:void(0);" class="button primary fit getstarted rounded-button" id="getstarted-menu" data-i18n="actions.getStarted">Get Started</a></li>
+				<li><a href="javascript:void(0);" class="button fit rounded-button" id="emergency-recovery-btn-menu" data-i18n="actions.emergencyRecovery">Easy Recovery</a></li>
+			</ul>
+			<ul class="actions stacked">
+				<li><a href="#mysetup" class="button primary fit mysetup rounded-button" id="mysetup-menu" data-i18n="actions.mySetup">My Setup</a></li>
+			</ul>
+			<ul class="actions stacked">
+				<li><a href="#" class="button primary fit signout rounded-button" id="signout-menu" data-i18n="actions.signOut">Log Out</a></li>
+			</ul>
+		</nav>
+
+		<!-- Banner -->
+		<section id="banner" class="major">
+			<div class="inner">
+				<!--
+				<header class="major">
+					<h1 id="totalvalue" data-i18n="banner.headline">BitBoY Web3 Wallet</h1>
+				</header>
+				-->
+
+				<!-- PWA Install Banner -->
+				<div id="pwa-install-banner" style="display: none;">
+					<div class="add-to-home-screen-banner">
+						<a href="#" class="button primary" id="add-home-btn" data-i18n="actions.addToHomeScreen">Add to Home Screen</a>
+					</div>
+				</div>
+
+				<!-- Email Alert -->
+				<div id="setemailalert">
+				</div>
+
+				<!-- WalletConnect Deep Link Log-in Required Banner -->
+				<div id="walletconnect-signin-banner" style="display: none;">
+					<div class="email-warning-banner">
+						<p data-i18n="walletconnect.deepLink.signinRequired">ウォレットを接続するにはサインインしてください。</p>
+					</div>
+				</div>
+
+
+				<!-- Email Warning Banner (MPC初期化後、メール未設定の場合) -->
+				<div id="email-warning-banner" style="display: none;">
+					<div class="email-warning-banner">
+						<h4 data-i18n="email.warning.title">Email Setup Required for Easy Recovery</h4>
+						<p data-i18n="email.warning.description">The MPC wallet has been successfully initialized, but the email address required for easy recovery has not been set up. By setting up an email address, you can recover your wallet through the Guardian Network using Passkey authentication.</p>
+						<div class="warning-actions">
+							<a href="#" class="button primary" id="start-email-setup-btn" data-i18n="email.warning.startSetup">Start Email Setup</a>
+							<a href="#" class="button" id="dismiss-email-warning-btn" data-i18n="email.warning.setupLater">Setup Later</a>
+						</div>
+					</div>
+				</div>
+
+				<!-- Email Verification Section 1 -->
+				<section id="setemailsection1" class="email-setup-section" style="display: none;">
+					<h3 data-i18n="email.setup.title">Easy Recovery Email Setup</h3>
+					<div class="setup-info">
+						<h5 data-i18n="email.setup.guardianTitle">🔐 Guardian Network Recovery</h5>
+						<p data-i18n="email.setup.description">By setting up an email address, you can recover your wallet through the Guardian Network in emergency situations. This setup is optional but recommended for enhanced security.</p>
+					</div>
+					<form method="post" action="#">
+						<div class="fields">
+							<div class="field half">
+								<label for="email" data-i18n="email.setup.emailLabel">Email Address</label>
+								<input type="email" name="email" id="email" placeholder="your.email@example.com" data-i18n-attr="placeholder:email.setup.emailPlaceholder" />
+							</div>
+						</div>
+						<ul class="actions">
+							<li><a href="#" class="button primary" id="send-verification-btn" data-i18n="email.setup.sendCode">Send Verification Code</a></li>
+							<li><a href="#" class="button" id="cancel-email-setup-btn" data-i18n="actions.cancel">Cancel</a></li>
+						</ul>
+					</form>
+				</section>
+
+				<!-- Email Verification Section 2 -->
+				<section id="setemailsection2" class="email-setup-section"  style="display: none;">
+					<h3 data-i18n="email.verification.title">Complete Email Verification</h3>
+					<div class="setup-info">
+						<h5 data-i18n="email.verification.verifyTitle">✅ Verify Authentication Code</h5>
+						<p data-i18n="email.verification.description">Please enter the 6-digit authentication code sent to your email to complete the email setup.</p>
+					</div>
+					<form method="post" action="#">
+						<div class="fields">
+							<div class="field half">
+								<label for="authcode" data-i18n="email.verification.codeLabel">Authentication Code</label>
+								<input type="text" name="authcode" id="authcode" placeholder="Enter 6-digit code" maxlength="6" data-i18n-attr="placeholder:email.verification.codePlaceholder" />
+							</div>
+						</div>
+						<ul class="actions">
+							<li><a href="#" class="button primary" id="complete-email-setup-btn" data-i18n="email.verification.complete">Verify and Complete Setup</a></li>
+							<li><a href="#" class="button" id="back-to-email-input-btn" data-i18n="actions.back">Back</a></li>
+						</ul>
+					</form>
+				</section>
+
+				<div class="content mainwallet"  style="display: none;">
+					<!--<p data-i18n="wallet.main">Main Wallet</p>-->
+					<ul class="actions">
+						<li><a href="javascript:void(0);" class="button next scrolly getstarted first-button" id="getstarted-banner" data-i18n="actions.getStarted">Get Started</a></li>
+					</ul>
+				</div>
+				<section id="restoreaccount" style="display: none;">
+					<div class="inner content">
+						<p><span data-i18n="wallet.restore.description">To restore your previously used account and get started, please click the link:</span> <a href="javascript:void(0);" class="restoreaccount" id="restore-wallet-btn" data-i18n="wallet.restore.link">Restore Account</a></p>
+					</div>
+				</section>
+			</div>
+		</section>
+
+		<!-- Main -->
+		<div id="main">
+
+			<section id="topmarket">
+				<div class="inner">
+					<header class="major">
+						<p data-i18n="wallet.market">Market</p>
+					</header>
+
+					<div class="market-tabs">
+						<button class="market-tab active" data-target="market-coins">Coins</button>
+						<button class="market-tab" data-target="market-gold">Gold</button>
+						<button class="market-tab" data-target="market-rwa">RWA</button>
+					</div>
+
+					<div class="table-wrapper market-panel active" id="market-coins">
+						<table>
+							<thead>
+								<tr>
+									<th class="topmarket-header">Coin</th>
+									<th class="topmarket-header">Price (USD)</th>
+									<th class="topmarket-header">24h Change</th>
+								</tr>
+							</thead>
+							<tbody id="coin-price-list">
+								<tr id="price_BTC">
+									<td><span class="coin-icon"><img src="/images/icon_BTC.svg" alt="BTC" class="coin-icon-img" style="width: 1.2em; height: 1.2em; vertical-align: middle; display: inline-block;"></span> BTC<span class="mobile-break"><br></span> (Bitcoin)</td>
+									<td id="price-value_BTC">-</td>
+									<td id="price-change_BTC" class="">-</td>
+								</tr>
+								<tr id="price_ETH">
+									<td><span class="coin-icon"><img src="/images/icon_ETH.svg" alt="ETH" class="coin-icon-img" style="width: 1.2em; height: 1.2em; vertical-align: middle; display: inline-block;"></span> ETH<span class="mobile-break"><br></span> (Ethereum)</td>
+									<td id="price-value_ETH">-</td>
+									<td id="price-change_ETH" class="">-</td>
+								</tr>
+								<tr id="price_POL">
+									<td><span class="coin-icon"><img src="/images/icon_POL.svg" alt="POL" class="coin-icon-img" style="width: 1.2em; height: 1.2em; vertical-align: middle; display: inline-block;"></span> POL<span class="mobile-break"><br></span> (Polygon)</td>
+									<td id="price-value_POL">-</td>
+									<td id="price-change_POL" class="">-</td>
+								</tr>
+								<tr id="price_SOL">
+									<td><span class="coin-icon"><img src="/images/icon_SOL.svg" alt="SOL" class="coin-icon-img" style="width: 1.2em; height: 1.2em; vertical-align: middle; display: inline-block;"></span> SOL<span class="mobile-break"><br></span> (Solana)</td>
+									<td id="price-value_SOL">-</td>
+									<td id="price-change_SOL" class="">-</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+
+					<div class="table-wrapper market-panel" id="market-gold" style="display:none;">
+						<table>
+							<thead>
+								<tr>
+									<th class="topmarket-header">Asset</th>
+									<th class="topmarket-header">Price (USD)</th>
+									<th class="topmarket-header">24h Change</th>
+								</tr>
+							</thead>
+							<tbody id="gold-price-list">
+								<tr id="price_XAUT">
+									<td>XAUT (Tether Gold)</td>
+									<td id="price-value_XAUT">-</td>
+									<td id="price-change_XAUT" class="">-</td>
+								</tr>
+								<tr id="price_PAXG">
+									<td>PAXG (PAX Gold)</td>
+									<td id="price-value_PAXG">-</td>
+									<td id="price-change_PAXG" class="">-</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+
+					<div class="table-wrapper market-panel" id="market-rwa" style="display:none;">
+						<table>
+							<thead>
+								<tr>
+									<th class="topmarket-header">Asset</th>
+									<th class="topmarket-header">Price (USD)</th>
+									<th class="topmarket-header">24h Change</th>
+								</tr>
+							</thead>
+							<tbody id="rwa-price-list">
+								<tr id="price_FIGHELOC">
+									<td>FIGHELOC (Figure HELOC)</td>
+									<td id="price-value_FIGHELOC">-</td>
+									<td id="price-change_FIGHELOC" class="">-</td>
+								</tr>
+								<tr id="price_LINK">
+									<td>LINK (Chainlink)</td>
+									<td id="price-value_LINK">-</td>
+									<td id="price-change_LINK" class="">-</td>
+								</tr>
+								<tr id="price_XLM">
+									<td>XLM (Stellar)</td>
+									<td id="price-value_XLM">-</td>
+									<td id="price-change_XLM" class="">-</td>
+								</tr>
+								<tr id="price_H2">
+									<td>H2 (Hash-2)</td>
+									<td id="price-value_H2">-</td>
+									<td id="price-change_H2" class="">-</td>
+								</tr>
+								<tr id="price_ONDO">
+									<td>ONDO (Ondo Finance)</td>
+									<td id="price-value_ONDO">-</td>
+									<td id="price-change_ONDO" class="">-</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+			</section>
+
+			<section id="payments" class="inner top-section-margin">
+				<ul class="actions">
+					<li><a href="#scantopay" class="button" style="display: flex; align-items: center; justify-content: center; width: 158px;"><img src="images/88_scan.svg" alt="" class="tile-icon" style="width: 2.4em; height: 2.4em; margin-right: 0.5em; filter: brightness(0) invert(1);"/> <span data-i18n="payments.scanToPay" style="font-size: 0.7em;">Scan to pay</span></a></li>
+					<li><a href="#receivepay" class="button" style="display: flex; align-items: center; justify-content: center; width: 158px;"><img src="images/88_qr.svg" alt="" class="tile-icon" style="width: 2.4em; height: 2.4em; margin-right: 0.5em; filter: brightness(0) invert(1);"/> <span data-i18n="payments.receivePayment" style="font-size: 0.7em;">Receive</span></a></li>
+				</ul>
+			</section>
+
+			<!-- Services Header -->
+			<section class="inner top-section-margin">
+					<header class="major top-section-margin">
+						<p data-i18n="wallet.services">Services</p>
+					</header>
+			</section>
+
+			<!-- One -->
+			<section id="one" class="tiles inner">
+				<article>
+					<span class="image">
+						<img src="images/pic01.png" alt="" />
+						<img src="images/01_wallet.svg" alt="" class="tile-icon" />
+					</span>
+					<header class="major">
+						<h3><a href="#coins" class="link" data-i18n="nav.coins">Coins</a></h3>
+						<p data-i18n="nav.coinsSubtitle">Crypto Wallet</p>
+					</header>
+				</article>
+				<article>
+					<span class="image">
+						<img src="images/pic04.png" alt="" />
+						<img src="images/02_membership.svg" alt="" class="tile-icon" />
+					</span>
+					<header class="major">
+						<h3><a href="https://member.bitvoy.net/" class="link" data-i18n="nav.membership">Membership</a></h3>
+						<p data-i18n="nav.membershipSubtitle">Join & Benefits</p>
+					</header>
+				</article>
+				<article>
+					<span class="image">
+						<img src="images/pic03.png" alt="" />
+						<img src="images/03_swap.svg" alt="" class="tile-icon" />
+					</span>
+					<header class="major">
+						<h3><a href="#swap" class="link" data-i18n="nav.swap">Swap</a></h3>
+						<p data-i18n="nav.swapSubtitle">Swap & Trade</p>
+					</header>
+				</article>
+				<article>
+					<span class="image">
+						<img src="images/pic06.png" alt="" />
+						<img src="images/04_NFTs.svg" alt="" class="tile-icon" />
+					</span>
+					<header class="major">
+						<h3><a href="#nfts" class="link" data-i18n="nav.nfts">NFTs</a></h3>
+						<p data-i18n="nav.nftsSubtitle">NFT Wallet</p>
+					</header>
+				</article>
+				<article>
+					<span class="image">
+						<img src="images/pic05.png" alt="" />
+						<img src="images/05_pickup.svg" alt="" class="tile-icon" />
+					</span>
+					<header class="major">
+						<h3><a href="pickup.html" class="link" data-i18n="nav.featured">Featured</a></h3>
+						<p data-i18n="nav.featuredSubtitle">Featured Crypto</p>
+					</header>
+				</article>
+				<article>
+					<span class="image">
+						<img src="images/pic02.png" alt="" />
+						<img src="images/06_affiliates.svg" alt="" class="tile-icon" />
+					</span>
+					<header class="major">
+						<h3><a href="affiliates.html" class="link" data-i18n="nav.affiliates">Affiliates</a></h3>
+						<p data-i18n="nav.affiliatesSubtitle">Earn & Promote</p>
+					</header>
+				</article>
+			</section>
+
+			<!-- Two -->
+			<section id="two">
+				<div class="inner">
+					<header class="major">
+						<h2 data-i18n="sectionTwo.title">BITVOY</h2>
+					</header>
+					<h4 data-i18n="sectionTwo.subtitle">
+						Financial adventure starts with a small step — and becomes a shared journey.
+					</h4>
+					<p data-i18n="sectionTwo.body">BitVoy opens the door to finance and investment, letting anyone safely and intuitively take part in global ventures.</p>
+					<ul class="actions">
+						<li><a href="lp.html" class="button" data-i18n="sectionTwo.aboutButton">About BitVoy</a></li>
+					</ul>
+				</div>
+			</section>
+
+		</div>
+
+		<!-- Coins Page (SPA) -->
+		<div id="coins-page" style="display: none;">
+			<!-- One -->
+			<section id="coins-section-one">
+				<div class="inner">
+					<header class="major">
+						<h1>$0.00</h1>
+					</header>
+
+					<!-- Content -->
+					<h4 id="content" data-i18n="coins.banner.mainWallet">Main Wallet</h4>
+					<div id="viewIcon" class="col-6 col-12-small" hidden>
+						<ul class="icons">
+							<li><a href="#" data-action="coinsViewSend" class="icon"><img class="coins-wallet-icon" src="images/send.png" alt="Send" data-i18n-attr="alt:coins.actions.send" /></a></li>
+							<li><a href="#" data-action="coinsViewReceive" class="icon"><img class="coins-wallet-icon" src="images/receive.png" alt="Receive" data-i18n-attr="alt:coins.actions.receive" /></a></li>
+							<li><a href="#" data-action="coinsViewSwap" class="icon"><img class="coins-wallet-icon" src="images/swap.png" alt="Swap" data-i18n-attr="alt:coins.actions.swap" /></a></li>
+						</ul>
+					</div>
+
+					<hr />
+
+					<!-- Elements -->
+					<div class="row gtr-200">
+
+						<div id="viewCoin" class="col-6 col-12-medium">
+
+						<div class="market-tabs">
+							<button class="market-tab active" data-target="coins-coins">Coins</button>
+							<button class="market-tab" data-target="coins-gold">Gold</button>
+							<button class="market-tab" data-target="coins-rwa">RWA</button>
+						</div>
+
+						<div class="coins-table-wrapper market-panel active" id="coins-coins">
+								<table>
+									<thead>
+										<tr>
+											<th data-i18n="coins.tables.coins.headers.coin">Coin</th>
+											<th data-i18n="coins.tables.coins.headers.balance">Balance</th>
+										</tr>
+									</thead>
+								<tbody id="coin-list-coins">
+										<!-- 行は coins.js の coinsViewCoin() で動的に生成される -->
+									</tbody>
+								</table>
+							</div>
+
+						<div class="coins-table-wrapper market-panel" id="coins-gold" style="display:none;">
+							<table>
+								<thead>
+									<tr>
+										<th data-i18n="coins.tables.coins.headers.coin">Coin</th>
+										<th data-i18n="coins.tables.coins.headers.balance">Balance</th>
+									</tr>
+								</thead>
+								<tbody id="coin-list-gold">
+								</tbody>
+							</table>
+						</div>
+
+						<div class="coins-table-wrapper market-panel" id="coins-rwa" style="display:none;">
+							<table>
+								<thead>
+									<tr>
+										<th data-i18n="coins.tables.coins.headers.coin">Coin</th>
+										<th data-i18n="coins.tables.coins.headers.balance">Balance</th>
+									</tr>
+								</thead>
+								<tbody id="coin-list-rwa">
+								</tbody>
+							</table>
+						</div>
+
+							<div class="col-12">
+								<a href="#" data-action="coinsShowAddToken" class="button fit small" data-i18n="coins.actions.addToken">Add Token</a>
+							</div>
+						</div>
+
+						<div id="viewAddToken" class="col-6 col-12-medium" hidden>
+
+							<h3 data-i18n="coins.customToken.title">Add Custom Token</h3>
+							<form method="post" action="#">
+								<div class="row gtr-uniform fields">
+									<div class="field half">
+										<label for="token-network" data-i18n="coins.customToken.network">Network</label>
+										<select name="token-network" id="token-network">
+											<option value="ethereum">Ethereum</option>
+											<option value="polygon">Polygon</option>
+											<option value="solana">Solana</option>
+											<option value="ton">TON</option>
+											<option value="bsc">BNB Smart Chain</option>
+											<option value="avalanche">Avalanche</option>
+											<option value="arbitrum">Arbitrum</option>
+											<option value="base">Base</option>
+											<option value="optimism">Optimism</option>
+											<option value="tron">TRON</option>
+										</select>
+									</div>
+									<div class="field half">
+										<label for="token-contract-address" data-i18n="coins.customToken.contract">Contract Address</label>
+										<input type="text" name="token-contract-address" id="token-contract-address" value="" placeholder="0x..." />
+									</div>
+									<div class="field half">
+										<label for="token-name" data-i18n="coins.customToken.name">Token Name</label>
+										<input type="text" name="token-name" id="token-name" value="" placeholder="Token Name" />
+									</div>
+									<div class="field half">
+										<label for="token-symbol" data-i18n="coins.customToken.symbol">Token Symbol</label>
+										<input type="text" name="token-symbol" id="token-symbol" value="" placeholder="SYMBOL" />
+									</div>
+									<div class="field half">
+										<label for="token-decimals" data-i18n="coins.customToken.decimals">Decimals</label>
+										<input type="number" name="token-decimals" id="token-decimals" value="18" min="0" max="18" />
+									</div>
+								</div>
+							</form>
+
+							<!-- Buttons -->
+							<div class="col-12">
+								<a href="#" data-action="coinsAddToken" class="button primary fit" data-i18n="coins.actions.addToken">Add Token</a>
+								<a href="#" data-action="coinsBackToCoinList" class="button fit small" data-i18n="coins.actions.back">Back</a>
+							</div>
+						</div>
+						<div id="viewHistory" class="col-6 col-12-medium" hidden>
+
+							<h4><span id="history-coin">TON</span> <span data-i18n="coins.tables.history.title">History</span></h4>
+							
+							<!-- アイコンボタン -->
+							<div id="viewIconHistory" class="col-6 col-12-small">
+								<ul class="icons">
+									<li><a href="#" data-action="coinsViewSendFromHistory" class="icon"><img class="coins-wallet-icon" src="images/send.png" alt="Send" data-i18n-attr="alt:coins.actions.send" /></a></li>
+									<li><a href="#" data-action="coinsViewReceiveFromHistory" class="icon"><img class="coins-wallet-icon" src="images/receive.png" alt="Receive" data-i18n-attr="alt:coins.actions.receive" /></a></li>
+									<li><a href="#" data-action="coinsViewSwap" class="icon"><img class="coins-wallet-icon" src="images/swap.png" alt="Swap" data-i18n-attr="alt:coins.actions.swap" /></a></li>
+								</ul>
+							</div>
+							
+							<div class="coins-table-wrapper">
+								<table>
+									<thead>
+										<tr>
+											<th data-i18n="coins.tables.history.headers.type">Type</th>
+											<th data-i18n="coins.tables.history.headers.date">Date</th>
+											<th data-i18n="coins.tables.history.headers.amount">Amount</th>
+											<th data-i18n="coins.tables.history.headers.txid">Transaction ID</th>
+										</tr>
+									</thead>
+									<tbody id="history-history">
+									</tbody>
+								</table>
+							</div>
+							<div class="col-12">
+								<a href="#" data-action="coinsBackToCoins" class="button fit small" data-i18n="coins.actions.back">Back</a>
+							</div>
+
+
+						</div>
+						<div id="viewCoinSelect" class="col-6 col-12-medium" hidden>
+
+							<h3 id="coin-select-title" data-i18n="coins.sendForm.selectCoin">Select Coin to Send</h3>
+							<div class="coins-table-wrapper">
+								<table>
+									<thead>
+										<tr>
+											<th data-i18n="coins.tables.coins.headers.coin">Coin</th>
+											<th data-i18n="coins.tables.coins.headers.balance">Balance</th>
+											<th data-i18n="coins.tables.coins.headers.action">Action</th>
+										</tr>
+									</thead>
+									<tbody id="coin-select-list">
+										<!-- 動的に生成される通貨リスト -->
+									</tbody>
+								</table>
+							</div>
+							<div class="col-12">
+								<a href="#" data-action="coinsBackToCoinList" class="button fit small" data-i18n="coins.actions.back">Back</a>
+							</div>
+
+						</div>
+						<div id="viewSend" class="col-6 col-12-medium" hidden>
+
+							<!-- Form -->
+							<a name="send">
+								<h3 data-i18n="coins.actions.send">Send</h3>
+							</a>
+
+							<form method="post" action="#">
+								<div class="row gtr-uniform fields">
+									<div class="field half">
+										<label for="send-amount" data-i18n="coins.sendForm.amount">Amount</label>
+										<input type="text" name="send-amount" id="send-amount" value="" placeholder="Amount" data-i18n-attr="placeholder:coins.sendForm.amount" />
+									</div>
+									<div class="field half" style="position: relative;">
+										<label for="send-address" data-i18n="coins.sendForm.toAddress">To Address</label>
+										<input type="text" name="send-address" id="send-address" value="" placeholder="Address" data-i18n-attr="placeholder:coins.sendForm.addressPlaceholder" />
+										<a href="#" data-action="coinsScanQR" class="icon solid alt fa-camera" style="position: absolute; right: 0.5em; top: 2.5em; display: inline-block;"><span class="label" data-i18n="coins.sendForm.scan">Scan</span></a>
+									</div>
+								</div>
+							</form>
+
+							<!-- Selected Coin Display -->
+							<div class="row gtr-uniform">
+								<div class="col-12">
+									<div class="box">
+										<h4 data-i18n="coins.sendForm.selectedCoin">Selected Coin</h4>
+										<div id="selected-coin-display">
+											<span id="selected-coin-icon"></span>
+											<span id="selected-coin-name"></span>
+											<span id="selected-coin-balance"></span>
+										</div>
+									</div>
+								</div>
+							</div>
+
+							<!-- Buttons -->
+							<div class="col-12">
+								<a href="#" data-action="coinsViewSendConfirm" class="button primary fit" data-i18n="coins.actions.next">Next</a>
+							</div>
+							<div class="col-12" style="margin-top: 0.5em;">
+								<a href="#" data-action="coinsBackToHistoryOrCoinList" class="button fit" data-i18n="coins.actions.back">Back</a>
+							</div>
+						</div>
+						<div id="viewReader" class="col-6 col-12-medium" hidden>
+							<div class="coins-qrreader">
+								<video id="js-video" class="coins-qrreader-video" autoplay playsinline></video>
+								<div class="coins-wrap-canvas">
+									<canvas id="js-canvas"></canvas>
+								</div>
+							</div>
+							<div class="col-12" style="margin-top: 1em;">
+								<a href="#" data-action="coinsCancelScan" class="button fit small" data-i18n="coins.actions.cancel">Cancel</a>
+							</div>
+						</div>
+						<div id="viewSendConfirm" class="col-6 col-12-medium" hidden>
+
+							<h2 id="confirm-spend"></h2>
+							<h4 data-i18n="coins.banner.mainWallet">Main Wallet</h4>
+							<div class="coins-table-wrapper">
+								<table>
+									<tbody>
+										<tr>
+											<td id="confirm-coinname"></td>
+											<td id="confirm-chain"></td>
+										</tr>
+										<tr>
+											<td data-i18n="coins.sendForm.from">From</td>
+											<td id="confirm-from"></td>
+										</tr>
+										<tr>
+											<td data-i18n="coins.sendForm.to">To</td>
+											<td id="confirm-to"></td>
+										</tr>
+										<tr>
+											<td data-i18n="coins.sendForm.networkFee">Network Fee</td>
+											<td><span id="confirm-fee"></span><br><span id="confirm-fee-usd"></span></td>
+										</tr>
+										<tr>
+											<td data-i18n="coins.sendForm.maxTotal">Max Total</td>
+											<td id="confirm-total"></td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+
+							<!-- Buttons -->
+							<div class="col-12">
+								<a href="#" data-action="coinsApproval" class="button primary fit" data-i18n="coins.actions.approval">Approval</a>
+							</div>
+							<div class="col-12" style="margin-top: 0.5em;">
+								<a href="#" data-action="coinsBackToCoinList" class="button fit" data-i18n="coins.actions.cancel">Cancel</a>
+							</div>
+						</div>
+
+						<div id="viewReceive" class="col-6 col-12-medium" hidden>
+
+							<!-- Form -->
+							<a name="receive">
+								<h3 data-i18n="coins.actions.receive">Receive</h3>
+							</a>
+							
+							<!-- Selected Coin Display -->
+							<div class="row gtr-uniform">
+								<div class="col-12">
+									<div class="box">
+										<h4 data-i18n="coins.sendForm.selectedCoin">Selected Coin</h4>
+										<div id="selected-coin-display-receive">
+											<span id="selected-coin-icon-receive"></span>
+											<span id="selected-coin-name-receive"></span>
+											<span id="selected-coin-balance-receive"></span>
+										</div>
+									</div>
+								</div>
+							</div>
+							
+							<div class="box alt">
+								<div class="row gtr-50 gtr-uniform">
+									<div class="col-6"><span class="image fit coins-qrpadding"><div id="recv-address-qr"></div></span></div>
+								</div>
+							</div>
+
+							<!-- Buttons -->
+							<div class="col-12">
+								<input type="text" name="recv-address" id="recv-address" value="" placeholder="Address" data-i18n-attr="placeholder:coins.receive.address" />
+								<a href="#" data-action="coinsCopyToClipboard" data-target="recv-address" class="button primary fit" data-i18n="coins.actions.copy">Copy</a>
+							</div>
+							<div class="col-12" style="margin-top: 0.5em;">
+								<a href="#" data-action="coinsBackToHistoryOrCoinList" class="button fit" data-i18n="coins.actions.back">Back</a>
+							</div>
+						</div>
+
+					</div>
+
+				</div>
+			</section>
+		</div>
+
+		<!-- Scan to Pay Page (SPA) -->
+		<div id="scantopay-page" style="display: none;">
+			<section id="scantopay-section">
+				<div class="inner">
+					<header class="major">
+						<h1 data-i18n="payments.scanTitle">Scan QR Code</h1>
+						<p data-i18n="payments.scanDescription">Scan a QR code to pay</p>
+					</header>
+
+					<!-- QR Scanner View -->
+					<div id="scantopay-scanner-view" class="col-6 col-12-medium">
+						<div class="coins-qrreader">
+							<video id="scantopay-video" class="coins-qrreader-video" autoplay playsinline></video>
+							<div class="coins-wrap-canvas">
+								<canvas id="scantopay-canvas"></canvas>
+							</div>
+						</div>
+						<div class="col-12" style="margin-top: 1em;">
+							<a href="#" id="scantopay-cancel-btn" class="button fit" data-i18n="payments.cancel">Cancel</a>
+						</div>
+					</div>
+
+					<!-- Payment Confirmation View -->
+					<div id="scantopay-confirm-view" class="col-12" style="display: none;">
+						<h2 data-i18n="payments.confirmPayment">Confirm Payment</h2>
+						<div class="coins-table-wrapper">
+							<table>
+								<tbody>
+									<tr>
+										<td data-i18n="payments.to">To</td>
+										<td id="scantopay-confirm-to"></td>
+									</tr>
+									<tr>
+										<td data-i18n="payments.amount">Amount</td>
+										<td id="scantopay-confirm-amount"></td>
+									</tr>
+									<tr>
+										<td data-i18n="payments.token">Token</td>
+										<td id="scantopay-confirm-token"></td>
+									</tr>
+									<tr>
+										<td data-i18n="payments.chain">Chain</td>
+										<td id="scantopay-confirm-chain"></td>
+									</tr>
+									<tr id="scantopay-confirm-memo-row" style="display: none;">
+										<td data-i18n="payments.memo">Memo</td>
+										<td id="scantopay-confirm-memo"></td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+						<div class="col-12" style="margin-top: 1em;">
+							<a href="#" id="scantopay-approve-btn" class="button primary fit" data-i18n="payments.approve">Approve</a>
+							<a href="#" id="scantopay-back-btn" class="button fit" style="margin-top: 0.5em;" data-i18n="payments.cancel">Cancel</a>
+						</div>
+					</div>
+				</div>
+			</section>
+		</div>
+
+		<!-- Receive Payment Page (SPA) -->
+		<div id="receivepay-page" style="display: none;">
+			<section id="receivepay-section">
+				<div class="inner">
+					<header class="major">
+						<h1 data-i18n="payments.receiveTitle">Receive Payment</h1>
+						<p data-i18n="payments.receiveDescription">Generate QR code for receiving payment</p>
+					</header>
+
+					<!-- Form -->
+					<form method="post" action="#">
+						<div class="row gtr-uniform fields">
+							<div class="field">
+								<label for="receivepay-amount" data-i18n="payments.amountLabel">Amount</label>
+								<input type="text" name="receivepay-amount" id="receivepay-amount" value="" placeholder="" data-i18n-attr="placeholder:payments.amountPlaceholder" />
+							</div>
+							<div class="field">
+								<label for="receivepay-memo" data-i18n="payments.memoLabel">Memo (Optional)</label>
+								<input type="text" name="receivepay-memo" id="receivepay-memo" value="" placeholder="" data-i18n-attr="placeholder:payments.memoPlaceholder" />
+							</div>
+						</div>
+					</form>
+
+					<!-- QR Code Display -->
+					<div id="receivepay-qr-container" class="col-12" style="display: none; margin-top: 2em;">
+						<div class="box alt">
+							<div class="row gtr-50 gtr-uniform">
+								<div class="col-6"><span class="image fit coins-qrpadding"><div id="receivepay-qr"></div></span></div>
+							</div>
+						</div>
+					</div>
+
+					<!-- Buttons -->
+					<div class="col-12" style="margin-top: 1em;">
+						<a href="#" id="receivepay-generate-btn" class="button primary fit" data-i18n="payments.generateQR">Generate QR Code</a>
+						<a href="#home" class="button fit" style="margin-top: 0.5em;" data-i18n="payments.cancel">Cancel</a>
+					</div>
+				</div>
+			</section>
+		</div>
+
+		<!-- NFTs Page (SPA) -->
+		<div id="nfts-page" style="display: none;">
+			<!-- One -->
+			<section id="nfts-section-one">
+				<div class="inner">
+					<header class="major">
+						<h1 data-i18n="nfts.title">NFTs</h1>
+					</header>
+
+					<!-- Content -->
+					<h4 id="content" data-i18n="nfts.banner.mainWallet">Main Wallet</h4>
+					<div id="nfts-viewIcon" class="col-6 col-12-small">
+						<ul class="icons">
+							<li><a href="#" data-action="nftsViewSend" class="icon"><img class="nfts-wallet-icon" src="images/send.png" alt="Send" data-i18n-attr="alt:nfts.actions.send" /></a></li>
+							<li><a href="#" data-action="nftsViewReceive" class="icon"><img class="nfts-wallet-icon" src="images/receive.png" alt="Receive" data-i18n-attr="alt:nfts.actions.receive" /></a></li>
+						</ul>
+					</div>
+
+					<hr />
+
+					<!-- Elements -->
+					<div class="row gtr-200">
+
+						<div id="nfts-viewNFT" class="col-6 col-12-medium">
+							<h4 data-i18n="nfts.gallery.title">NFTs</h4>
+							<div class="nfts-gallery-wrapper">
+								<div id="nfts-list" class="row gtr-50 gtr-uniform">
+									<!-- NFT一覧は nfts.js の displayNFTs() で動的に生成される -->
+								</div>
+							</div>
+							<ul class="actions fit small">
+								<li><a href="#" data-action="nftsShowImport" class="button fit small" data-i18n="nfts.actions.import">Import NFT</a></li>
+							</ul>
+						</div>
+
+						<div id="nfts-viewDetail" class="col-6 col-12-medium" hidden>
+							<!-- Form -->
+							<a name="detail">
+								<h3 data-i18n="nfts.detail.title">Detail</h3>
+							</a>
+
+							<div class="box alt">
+								<div id="nfts-detail-nft" class="row gtr-50 gtr-uniform">
+									<div class="col-12 nft"><span class="image"><img id="nfts-detail-nft-image" class="nft" src="" alt="" /></span></div>
+								</div>
+							</div>
+							<section>
+								<div class="inner">
+									<p id="nfts-detail-description"></p>
+								</div>
+							</section>
+							<div class="nfts-table-wrapper">
+								<table>
+									<tbody>
+										<tr>
+											<td data-i18n="nfts.detail.name">Name</td>
+											<td id="nfts-detail-name"></td>
+										</tr>
+										<tr>
+											<td data-i18n="nfts.detail.chain">Chain</td>
+											<td id="nfts-detail-chain"></td>
+										</tr>
+										<tr>
+											<td data-i18n="nfts.detail.contract">Contract Address</td>
+											<td id="nfts-detail-contract"></td>
+										</tr>
+										<tr>
+											<td data-i18n="nfts.detail.tokenId">Token Id</td>
+											<td id="nfts-detail-tokenid"></td>
+										</tr>
+										<tr>
+											<td data-i18n="nfts.detail.creator">Creator</td>
+											<td id="nfts-detail-creator"></td>
+										</tr>
+										<tr>
+											<td data-i18n="nfts.detail.attributes">Attributes</td>
+											<td id="nfts-detail-attributes"></td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+
+							<!-- Buttons -->
+							<div class="col-12">
+								<a href="#" data-action="nftsViewSendFromDetail" class="button primary fit" data-i18n="nfts.actions.send">Send</a>
+							</div>
+							<div class="col-12 mtl">
+								<a href="#" data-action="nftsBackToNFTList" class="button fit small" data-i18n="nfts.actions.back">Back</a>
+							</div>
+						</div>
+
+						<div id="nfts-viewSend" class="col-6 col-12-medium" hidden>
+							<!-- Form -->
+							<a name="send">
+								<h3 data-i18n="nfts.actions.send">Send</h3>
+							</a>
+
+							<div class="box alt">
+								<div id="nfts-send-nft" class="row gtr-50 gtr-uniform">
+									<div class="col-12 nft"><span class="image"><img id="nfts-send-nft-image" class="nft" src="" alt="" /></span></div>
+								</div>
+							</div>
+							<form method="post" action="#">
+								<div class="row gtr-uniform fields">
+									<div class="field half">
+										<label for="nfts-send-address" data-i18n="nfts.sendForm.toAddress">To Address</label>
+										<input type="text" name="nfts-send-address" id="nfts-send-address" value="" placeholder="Address" data-i18n-attr="placeholder:nfts.sendForm.addressPlaceholder" />
+									</div>
+									<div class="field quarter">
+										<a href="#" data-action="nftsScanQR" class="icon brands alt fa-instagram"><span class="label" data-i18n="nfts.sendForm.scan">Scan</span></a>
+									</div>
+								</div>
+							</form>
+
+							<!-- Selected NFT Display -->
+							<div class="row gtr-uniform">
+								<div class="col-12">
+									<div class="box">
+										<h4 data-i18n="nfts.sendForm.selectedNFT">Selected NFT</h4>
+										<div id="nfts-selected-nft-display">
+											<span id="nfts-selected-nft-image"></span>
+											<span id="nfts-selected-nft-name"></span>
+											<span id="nfts-selected-nft-chain"></span>
+										</div>
+									</div>
+								</div>
+							</div>
+
+							<!-- Buttons -->
+							<div class="col-12">
+								<a href="#" data-action="nftsViewSendConfirm" class="button primary fit" data-i18n="nfts.actions.next">Next</a>
+							</div>
+							<div class="col-12 mtl">
+								<a href="#" data-action="nftsBackToDetail" class="button fit small" data-i18n="nfts.actions.back">Back</a>
+							</div>
+						</div>
+
+						<div id="nfts-viewReader" class="col-6 col-12-medium" hidden>
+							<div class="nfts-qrreader">
+								<video id="nfts-js-video" class="nfts-qrreader-video" autoplay playsinline></video>
+								<div class="nfts-wrap-canvas">
+									<canvas id="nfts-js-canvas"></canvas>
+								</div>
+							</div>
+							<div class="col-12" style="margin-top: 1em;">
+								<a href="#" data-action="nftsCancelScan" class="button fit small" data-i18n="nfts.actions.cancel">Cancel</a>
+							</div>
+						</div>
+
+						<div id="nfts-viewSendConfirm" class="col-6 col-12-medium" hidden>
+							<h2 id="nfts-confirm-spend"></h2>
+							<div class="nfts-table-wrapper">
+								<table>
+									<tbody>
+										<tr>
+											<td id="nfts-confirm-nft-name-cell"></td>
+											<td id="nfts-confirm-chain"></td>
+										</tr>
+										<tr>
+											<td data-i18n="nfts.confirm.from">From</td>
+											<td id="nfts-confirm-from"></td>
+										</tr>
+										<tr>
+											<td data-i18n="nfts.confirm.to">To</td>
+											<td id="nfts-confirm-to"></td>
+										</tr>
+										<tr>
+											<td data-i18n="nfts.confirm.fee">Network Fee</td>
+											<td><span id="nfts-confirm-fee"></span><br><span id="nfts-confirm-fee-usd"></span></td>
+										</tr>
+										<tr>
+											<td data-i18n="nfts.confirm.total">Max Total</td>
+											<td id="nfts-confirm-total"></td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+
+							<!-- Buttons -->
+							<div class="col-12">
+								<a href="#" data-action="nftsApproval" class="button primary fit" data-i18n="nfts.actions.approval">Approval</a>
+							</div>
+							<div class="col-12 mtl">
+								<a href="#" data-action="nftsBackToSend" class="button fit small" data-i18n="nfts.actions.back">Back</a>
+							</div>
+						</div>
+
+						<div id="nfts-viewReceive" class="col-6 col-12-medium" hidden>
+							<!-- Form -->
+							<a name="receive">
+								<h3 data-i18n="nfts.actions.receive">Receive</h3>
+							</a>
+							<form method="post" action="#">
+								<div class="row gtr-uniform fields">
+									<div class="field half">
+										<label for="nfts-recv-chain" data-i18n="nfts.receiveForm.chain">Chain</label>
+										<select name="nfts-recv-chain" id="nfts-recv-chain">
+											<option value="">-- Select Chain --</option>
+											<option value="ethereum">Ethereum</option>
+											<option value="polygon">Polygon</option>
+										</select>
+									</div>
+									<div class="field half">
+										<label for="nfts-recv-address" data-i18n="nfts.receiveForm.address">Address</label>
+										<input type="text" name="nfts-recv-address" id="nfts-recv-address" value="" placeholder="Address" data-i18n-attr="placeholder:nfts.receiveForm.addressPlaceholder" readonly />
+									</div>
+								</div>
+							</form>
+							<div class="box alt" id="nfts-recv-qr-container" style="display: none;">
+								<div class="row gtr-50 gtr-uniform">
+									<div class="col-6"><span class="image fit nfts-qrpadding"><div id="nfts-recv-address-qr"></div></span></div>
+								</div>
+							</div>
+
+							<!-- Buttons -->
+							<div class="col-12" id="nfts-recv-copy-container" style="display: none;">
+								<a href="#" data-action="nftsCopyToClipboard" data-target="nfts-recv-address" class="button primary fit" data-i18n="nfts.actions.copy">Copy</a>
+							</div>
+							<div class="col-12 mtl">
+								<a href="#" data-action="nftsBackToNFTList" class="button fit small" data-i18n="nfts.actions.back">Back</a>
+							</div>
+						</div>
+
+						<div id="nfts-viewImport" class="col-6 col-12-medium" hidden>
+							<!-- Form -->
+							<a name="import">
+								<h3 data-i18n="nfts.import.title">Import</h3>
+							</a>
+
+							<form method="post" action="#">
+								<div class="row gtr-uniform fields">
+									<div class="field half">
+										<label for="nfts-import-chain" data-i18n="nfts.import.chain">Chain</label>
+										<select name="nfts-import-chain" id="nfts-import-chain">
+											<option value="ethereum">Ethereum</option>
+											<option value="polygon">Polygon</option>
+										</select>
+									</div>
+									<div class="field half">
+										<label for="nfts-import-address" data-i18n="nfts.import.contractAddress">Contract Address</label>
+										<input type="text" name="nfts-import-address" id="nfts-import-address" value="" placeholder="0x..." />
+									</div>
+									<div class="field half">
+										<label for="nfts-import-tokenid" data-i18n="nfts.import.tokenId">Token Id</label>
+										<input type="text" name="nfts-import-tokenid" id="nfts-import-tokenid" value="" placeholder="Token Id" />
+									</div>
+								</div>
+							</form>
+
+							<!-- Buttons -->
+							<div class="col-12">
+								<a href="#" data-action="nftsImport" class="button primary fit" data-i18n="nfts.actions.import">Import</a>
+							</div>
+							<div class="col-12 mtl">
+								<a href="#" data-action="nftsBackToNFTList" class="button fit small" data-i18n="nfts.actions.back">Back</a>
+							</div>
+						</div>
+
+					</div>
+
+				</div>
+			</section>
+		</div>
+
+		<!-- Swap Page (SPA) -->
+		<div id="swap-page" style="display: none;">
+			<!-- One -->
+			<section id="swap-section-one">
+				<div class="inner">
+					<header class="major">
+						<h1 data-i18n="swap.title">Swap</h1>
+					</header>
+
+					<!-- Swap Form -->
+					<div class="row gtr-200">
+						<div class="col-12">
+							<div class="box">
+								<h3 data-i18n="swap.swapTokens">Swap Tokens</h3>
+								
+								<!-- Chain Selection -->
+								<div class="field">
+									<label for="swap-chain" data-i18n="swap.chain.label">送受信チェーン</label>
+									<select id="swap-chain" name="swap-chain">
+										<option value="" data-i18n="swap.chain.placeholder">Select Chain</option>
+									</select>
+								</div>
+								
+								<!-- From Token -->
+								<div class="field">
+									<label for="swap-from-token" data-i18n="swap.from.label">From Token</label>
+									<select id="swap-from-token" name="swap-from-token">
+										<option value="" data-i18n="swap.from.placeholder">Select Token</option>
+									</select>
+								</div>
+								
+								<!-- From Amount -->
+								<div class="field">
+									<label for="swap-from-amount" data-i18n="swap.from.amount">Amount</label>
+									<div class="swap-amount-container">
+										<input type="text" id="swap-from-amount" name="swap-from-amount" placeholder="0.0" class="swap-amount-input" />
+										<button type="button" id="swap-max-btn" class="button small" data-i18n="swap.actions.max">Max</button>
+									</div>
+									<div id="swap-from-balance" class="swap-balance"></div>
+								</div>
+
+								<!-- Swap Direction Button -->
+								<div class="swap-reverse-btn-container">
+								<button
+									type="button"
+									id="swap-reverse-btn"
+									class="swap-reverse-btn"
+									data-i18n-title="swap.reverseTokens"
+									data-i18n-aria-label="swap.reverseTokens"
+								>
+								<svg
+									viewBox="0 0 24 24"
+									fill="none"
+									stroke="#0A74EB"
+									stroke-width="2.2"
+									stroke-linecap="round"
+									stroke-linejoin="round"
+								>
+									<!-- 上向き矢印 -->
+									<line x1="12" y1="4" x2="12" y2="16" />
+									<polyline points="8,8 12,4 16,8" />
+								
+									<!-- 下向き矢印 -->
+									<line x1="12" y1="20" x2="12" y2="8" />
+									<polyline points="8,16 12,20 16,16" />
+									</svg>
+								</button>
+								</div>											
+
+								<!-- To Token -->
+								<div class="field">
+									<label for="swap-to-token" data-i18n="swap.to.label">To Token</label>
+									<select id="swap-to-token" name="swap-to-token">
+										<option value="" data-i18n="swap.to.placeholder">Select Token</option>
+									</select>
+								</div>
+
+								<!-- Quote Display -->
+								<div id="swap-quote-display" class="swap-quote-display swap-hide">
+									<div class="swap-quote-item">
+										<strong data-i18n="swap.to.estimated">DEX Estimated (Gross):</strong>
+										<span id="swap-amount-out-gross"></span>
+									</div>
+									<div class="swap-quote-item">
+										<strong><span data-i18n="swap.to.fee">BitVoy Fee</span> (<span id="swap-fee-bps"></span>%):</strong>
+										<span id="swap-fee-amount"></span>
+									</div>
+									<div class="swap-quote-item-large">
+										<strong data-i18n="swap.to.receive">You Receive (Net):</strong>
+										<span id="swap-user-amount-out" class="swap-amount-out"></span>
+									</div>
+									<div class="swap-quote-detail">
+										<div><span data-i18n="swap.quote.route">Route</span>: <span id="swap-route-summary"></span></div>
+										<div><span data-i18n="swap.quote.priceImpact">Price Impact</span>: <span id="swap-price-impact"></span>%</div>
+									</div>
+								</div>
+
+								<!-- Error Display -->
+								<div id="swap-error" class="swap-error swap-hide"></div>
+
+								<!-- Buttons -->
+								<div class="swap-buttons">
+									<button type="button" id="swap-preview-btn" class="button primary fit" data-i18n="swap.actions.preview">Preview</button>
+									<button type="button" id="swap-execute-btn" class="button primary fit swap-execute-btn swap-hide" data-i18n="swap.actions.swap">Swap</button>
+								</div>
+							</div>
+						</div>
+					</div>
+
+				</div>
+			</section>
+		</div>
+
+		<div id="swap-loading" class="swap-loading swap-hide"></div>
+
+		<!-- Cross-chain Swap Page (SPA) -->
+		<div id="cross-page" style="display: none;">
+			<!-- One -->
+			<section id="cross-section-one">
+				<div class="inner">
+					<header class="major">
+						<h1 data-i18n="crosschain.title">Cross-chain Swap</h1>
+					</header>
+
+					<!-- Cross-chain Swap Form -->
+					<div class="row gtr-200">
+						<div class="col-12">
+							<div class="box">
+								<h3 data-i18n="crosschain.crosschainSwapTokens">Cross-chain Swap Tokens</h3>
+								
+								<!-- From Chain -->
+								<div class="field">
+									<label for="cross-from-chain" data-i18n="crosschain.from.chain">From Chain</label>
+									<select id="cross-from-chain" name="cross-from-chain">
+										<option value="" data-i18n="crosschain.from.chainPlaceholder">Select Chain</option>
+									</select>
+								</div>
+
+								<!-- From Token -->
+								<div class="field">
+									<label for="cross-from-token" data-i18n="crosschain.from.token">From Token</label>
+									<select id="cross-from-token" name="cross-from-token">
+										<option value="" data-i18n="crosschain.from.tokenPlaceholder">Select Token</option>
+									</select>
+								</div>
+								
+								<!-- From Amount -->
+								<div class="field">
+									<label for="cross-from-amount" data-i18n="crosschain.from.amount">Amount</label>
+									<div class="cross-amount-container">
+										<input type="text" id="cross-from-amount" name="cross-from-amount" placeholder="0.0" class="cross-amount-input" />
+										<button type="button" id="cross-max-btn" class="button small" data-i18n="crosschain.actions.max">Max</button>
+									</div>
+									<div id="cross-from-balance" class="cross-balance"></div>
+								</div>
+
+								<!-- Swap Direction Button -->
+								<div class="cross-reverse-btn-container">
+								<button
+									type="button"
+									id="cross-reverse-btn"
+									class="cross-reverse-btn"
+									data-i18n-title="crosschain.reverseTokens"
+									data-i18n-aria-label="crosschain.reverseTokens"
+								>
+									<svg
+									viewBox="0 0 24 24"
+									fill="none"
+									stroke="#0A74EB"
+									stroke-width="2.2"
+									stroke-linecap="round"
+									stroke-linejoin="round"
+									>
+									<!-- 上向き矢印 -->
+									<line x1="12" y1="4" x2="12" y2="16" />
+									<polyline points="8,8 12,4 16,8" />
+								
+									<!-- 下向き矢印 -->
+									<line x1="12" y1="20" x2="12" y2="8" />
+									<polyline points="8,16 12,20 16,16" />
+									</svg>
+								</button>
+								</div>
+
+								<!-- To Chain -->
+								<div class="field">
+									<label for="cross-to-chain" data-i18n="crosschain.to.chain">To Chain</label>
+									<select id="cross-to-chain" name="cross-to-chain">
+										<option value="" data-i18n="crosschain.to.chainPlaceholder">Select Chain</option>
+									</select>
+								</div>
+
+								<!-- To Token -->
+								<div class="field">
+									<label for="cross-to-token" data-i18n="crosschain.to.token">To Token</label>
+									<select id="cross-to-token" name="cross-to-token">
+										<option value="" data-i18n="crosschain.to.tokenPlaceholder">Select Token</option>
+									</select>
+								</div>
+
+								<!-- Quote Display -->
+								<div id="cross-quote-display" class="cross-quote-display cross-hide">
+									<div class="cross-quote-item">
+										<strong data-i18n="crosschain.quote.youSend">You Send (From):</strong>
+										<span id="cross-amount-in"></span>
+									</div>
+									<div class="cross-quote-item">
+										<strong><span data-i18n="crosschain.quote.bitvoyFee">BitVoy Fee</span> (<span id="cross-fee-bps"></span>%):</strong>
+										<span id="cross-fee-amount"></span>
+									</div>
+									<div class="cross-quote-item">
+										<strong data-i18n="crosschain.quote.bridgedAmount">Bridged Amount:</strong>
+										<span id="cross-bridged-amount"></span>
+									</div>
+									<div class="cross-quote-item-large">
+										<strong data-i18n="crosschain.quote.estimatedReceived">Estimated Received (To):</strong>
+										<span id="cross-estimated-received" class="cross-amount-out"></span>
+									</div>
+									<div class="cross-quote-item">
+										<strong data-i18n="crosschain.quote.minimumReceived">Minimum Received:</strong>
+										<span id="cross-minimum-received"></span>
+									</div>
+									<div class="cross-quote-detail">
+										<div><span data-i18n="crosschain.quote.bridge">Bridge</span>: <span id="cross-bridge"></span></div>
+										<div><span data-i18n="crosschain.quote.dex">DEX</span>: <span id="cross-dex"></span></div>
+										<div><span data-i18n="crosschain.quote.estimatedTime">Estimated Time</span>: <span id="cross-estimated-time"></span></div>
+									</div>
+								</div>
+
+								<!-- Error Display -->
+								<div id="cross-error" class="cross-error cross-hide"></div>
+
+								<!-- Buttons -->
+								<div class="cross-buttons">
+									<button type="button" id="cross-preview-btn" class="button primary fit" data-i18n="crosschain.actions.preview">Preview</button>
+									<button type="button" id="cross-execute-btn" class="button primary fit cross-execute-btn cross-hide" data-i18n="crosschain.actions.swap">Swap</button>
+								</div>
+							</div>
+						</div>
+					</div>
+
+				</div>
+			</section>
+		</div>
+
+		<div id="cross-loading" class="cross-loading cross-hide"></div>
+
+		<!-- WalletConnect Signing Page (SPA) -->
+		<div id="walletconnect-page" style="display: none;">
+			<section id="walletconnect-section">
+				<div class="inner">
+					<header class="major">
+						<h1>WalletConnect Signing</h1>
+					</header>
+					
+					<div id="walletconnect-signing-view" class="col-6 col-12-medium">
+						<div class="box">
+							<div id="walletconnect-signing-info">
+								<h3 id="signing-method"></h3>
+								<div id="signing-details"></div>
+							</div>
+							<div class="col-12" style="margin-top: 20px;">
+								<a href="#" data-action="walletconnectApprove" class="button primary fit">Approve</a>
+								<a href="#" data-action="walletconnectReject" class="button fit" style="margin-top: 10px;">Reject</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+		</div>
+
+		<!-- My Setup Page (SPA) -->
+		<div id="mysetup-page" style="display: none;">
+			<section id="mysetup-section">
+				<div class="inner">
+					<header class="major">
+						<h1 data-i18n="mySetup.title">My Setup</h1>
+					</header>
+
+					<!-- Push Notifications Toggle -->
+					<div class="my-setup-item">
+						<label for="push-notification-toggle" data-i18n="mySetup.pushNotifications">Push Notifications</label>
+						<label class="toggle-switch">
+							<input type="checkbox" id="push-notification-toggle">
+							<span class="toggle-slider"></span>
+						</label>
+					</div>
+
+					<hr />
+
+					<!-- Developer Toggle -->
+					<div class="my-setup-item">
+						<label for="developer-toggle" data-i18n="mySetup.developer">Developer</label>
+						<label class="toggle-switch">
+							<input type="checkbox" id="developer-toggle">
+							<span class="toggle-slider"></span>
+						</label>
+					</div>
+
+					<!-- Network Selector (shown when Developer toggle is ON) -->
+					<div id="developer-network-section" style="display: none;">
+						<hr />
+						<div class="my-setup-item">
+							<label for="mysetup-network-selector" data-i18n="mySetup.network">Network</label>
+							<select id="mysetup-network-selector" title="Select Network" aria-label="Select Network">
+								<option value="mainnet" data-i18n="nav.network.mainnet">Mainnet</option>
+								<option value="testnet" data-i18n="nav.network.testnet">Testnet</option>
+							</select>
+						</div>
+					</div>
+
+					<hr />
+
+					<!-- Payment Settings -->
+					<div class="my-setup-item">
+						<h3 data-i18n="mySetup.paymentSettings">Payment Settings</h3>
+						<p data-i18n="mySetup.paymentSettingsDescription">Configure default chain and token for QR Pay</p>
+					</div>
+
+					<div class="my-setup-item">
+						<label for="mysetup-chain-selector" data-i18n="mySetup.preferredChain">Preferred Chain</label>
+						<select id="mysetup-chain-selector" title="Select Chain" aria-label="Select Chain">
+							<option value="" data-i18n="mySetup.selectChain">Select Chain</option>
+						</select>
+					</div>
+
+					<div class="my-setup-item">
+						<label for="mysetup-token-selector" data-i18n="mySetup.preferredToken">Preferred Token</label>
+						<select id="mysetup-token-selector" title="Select Token" aria-label="Select Token">
+							<option value="" data-i18n="mySetup.selectToken">Select Token</option>
+						</select>
+					</div>
+
+				</div>
+			</section>
+		</div>
+
+		<!-- Footer -->
+		<footer id="footer">
+			<div class="inner">
+				<ul class="icons">
+					<li><a href="#" class="icon brands alt fa-twitter"><span class="label" data-i18n="footer.twitter">Twitter</span></a></li>
+					<li><a href="#" class="icon brands alt fa-facebook-f"><span class="label" data-i18n="footer.facebook">Facebook</span></a></li>
+					<li><a href="#" class="icon brands alt fa-instagram"><span class="label" data-i18n="footer.instagram">Instagram</span></a></li>
+					<li><a href="#" class="icon brands alt fa-github"><span class="label" data-i18n="footer.github">GitHub</span></a></li>
+					<li><a href="#" class="icon brands alt fa-linkedin-in"><span class="label" data-i18n="footer.linkedin">LinkedIn</span></a></li>
+				</ul>
+				<ul class="copyright">
+					<li data-i18n="footer.copyright">&copy; BITVOY</li>
+					<li data-i18n="footer.design">Design: HTML5 UP</li>
+				</ul>
+			</div>
+		</footer>
+
+		<div id="loading" class="loading hide"></div>
+		<div id="coins-loading" class="loading hide"></div>
+
+		<!-- Dialog -->
+		<dialog id="bitvoy-dialog">
+			<header class="major">
+				<h2></h2>
+			</header>
+			<p></p>
+			<button id="dialog-close-btn" data-i18n="dialogs.generic.close">Close</button>
+		</dialog>
+
+		<dialog id="bitvoy-restore-dialog">
+			<header class="major">
+				<h2 data-i18n="dialogs.restore.title">Restore</h2>
+			</header>
+			<p data-i18n="dialogs.restore.ready">Ready to restore</p>
+			<button id="restore-button" data-i18n="dialogs.restore.cta">Continue</button>
+		</dialog>
+
+		<dialog id="auto-dialog">
+			<header class="major">
+				<h2></h2>
+			</header>
+			<p></p>
+		</dialog>
+
+
+  
+  <!-- ▼ In-App Browser (LINE / X / Telegramなど) 用オーバーレイ -->
+  <div id="overlay-inapp-warning" style="display:none;">
+	<div class="overlay-backdrop"></div>
+	<div class="overlay-content">
+	  <h3>ブラウザで開いてください</h3>
+	  <p>
+		現在、LINE / X / Telegram 等のアプリ内ブラウザで開いています。<br>
+		ホーム画面に追加するには、Safari や Chrome でこのページを開いてください。
+	  </p>
+	  <button id="btn-close-inapp-warning">閉じる</button>
+	</div>
+  </div>
+  
+  <!-- ▼ Android用「手動ガイド」（beforeinstallpromptが来ない場合用・お好みで） -->
+  <div id="overlay-android-guide" style="display:none;">
+	<div class="overlay-backdrop"></div>
+	<div class="overlay-content">
+	  <h3>ホーム画面に追加（Android）</h3>
+	  <ol>
+		<li>Chromeでこのページを開いていることを確認</li>
+		<li>右上の「︙」メニューをタップ</li>
+		<li>「アプリをインストール」または「ホーム画面に追加」を選択</li>
+	  </ol>
+	  <button id="btn-close-android-guide">閉じる</button>
+	</div>
+  </div>
+  
+
+	</div>
+
+	<!-- アプリ内ブラウザ検出バナー -->
+	<div id="bvExternalWrap" class="bv-external-wrap">
+		<div class="bv-external-bar">
+			<div class="bv-text" data-i18n="common.inAppBrowser.detected">アプリ内ブラウザを検出しました。Chrome, Safariなどの外部ブラウザでの閲覧をおすすめします。</div>
+			<button id="bvOpenInChrome" class="bv-btn" data-i18n="common.inAppBrowser.openInChrome">Chromeで開く</button>
+			<button id="bvCopy" class="bv-btn alt" data-i18n="common.inAppBrowser.copyUrl">URLをコピー（手動で開く）</button>
+		</div>
+	</div>
+
+	<!-- Scripts -->
+	<script src="/jspkg/bip32.browser.js"></script>
+	<script src="/jspkg/bip39.browser.js"></script>
+	<script src="/jspkg/bitcoinjs.browser.js"></script>
+	<script src="/jspkg/ed25519-hd-key.browser.js"></script>
+	<script src="/jspkg/ethers.umd.min.js"></script>
+	<script src="/jspkg/nacl.min.js"></script>
+	<script src="/jspkg/nacl-util.min.js"></script>
+	<script src="/jspkg/secrets.js"></script>
+	<script src="/jspkg/solana_bundle.js"></script>
+	<script src="/jspkg/solana-web3.browser.js"></script>
+	<script src="/jspkg/tonweb.browser.js"></script>
+	<script src="/jspkg/wif.browser.js"></script>
+	<script src="/jspkg/qrcode.js"></script>
+	<script src="/jspkg/bignumber.min.js"></script>
+	<script src="/jspkg/qr-scanner.umd.min.js"></script>
+	<script src="/jspkg/i18next.min.js"></script>
+	<script src="/jspkg/i18nextHttpBackend.min.js"></script>
+
+	<script src="/js/i18n-init.js"></script>
+
+	<script src="/js/coins-libs.js"></script>
+	<script src="/js/crypto-market.js"></script>
+
+	<!-- FROST WASM Library (must be loaded before p1client.bundle.js) -->
+	<script type="module" src="/js/frost-wasm-init.js"></script>
+	
+	<!-- P1 Client Library (includes ed25519, secp256k1, and ecdsa_tss support) -->
+	<script type="module" src="/js/p1client-init.js"></script>
+	<script src="/js/taproot.bundle.js"></script>
+
+	<script src="/js/GuardianShareClient.js"></script>	
+	<script src="/js/email-warning-manager.js?v=1.0.1"></script>
+	
+	<!-- OIDC Payment AA (Account Abstraction) support -->
+	<script src="/js/oidc-payment-aa.js"></script>
+	
+	<script src="/js/app-spa.js"></script>
+	
+	<script src="/js/system-init.js?v=1.0.1"></script>
+	<script src="/js/bitvoy-signout-init.js"></script>
+	
+	<!-- Coins page scripts -->
+	<script src="/js/coins.js"></script>
+	
+	<!-- NFTs page scripts -->
+	<script src="/js/nfts.js"></script>
+	
+	<!-- Swap page scripts -->
+	<script src="/js/swap.js" defer></script>
+	
+	<!-- Cross-chain Swap page scripts -->
+	<script src="/js/crosschain.js" defer></script>
+</body>
+</html>

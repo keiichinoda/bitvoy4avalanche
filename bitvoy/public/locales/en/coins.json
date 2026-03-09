@@ -1,0 +1,81 @@
+{
+  "banner": {
+    "title": "Coins",
+    "walletTitle": "$0.00",
+    "mainWallet": "Main Wallet"
+  },
+  "nav": {
+    "network.mainnet": "Mainnet",
+    "network.testnet": "Testnet"
+  },
+  "actions": {
+    "signOut": "Log Out",
+    "send": "Send",
+    "receive": "Receive",
+    "swap": "Swap",
+    "copy": "Copy",
+    "next": "Next",
+    "back": "Back",
+    "approval": "Approval",
+    "addToken": "Add Token",
+    "select": "Select",
+    "cancel": "Cancel"
+  },
+  "tables": {
+    "coins": {
+      "title": "Coins",
+      "headers": {
+        "coin": "Coin",
+        "balance": "Balance",
+        "action": "Action"
+      }
+    },
+    "history": {
+      "title": "History",
+      "headers": {
+        "type": "Type",
+        "date": "Date",
+        "amount": "Amount",
+        "txid": "Transaction ID"
+      }
+    }
+  },
+  "sendForm": {
+    "amount": "Amount",
+    "toAddress": "To Address",
+    "addressPlaceholder": "Address",
+    "scan": "Scan",
+    "selectedCoin": "Selected Coin",
+    "selectCoin": "Select Coin to Send",
+    "selectCoinReceive": "Select Coin to Receive",
+    "balance": "Balance",
+    "from": "From",
+    "to": "To",
+    "networkFee": "Network Fee",
+    "maxTotal": "Max Total"
+  },
+  "receive": {
+    "address": "Address"
+  },
+  "messages": {
+    "noTransactionsFound": "No transactions found",
+    "failedToLoadTransactions": "Failed to load transactions",
+    "noCoinsAvailable": "No coins available",
+    "transferCompleted": "Transfer Completed!",
+    "transactionHash": "Transaction Hash",
+    "transactionFailed": "Transaction failed - No hash returned"
+  },
+  "customToken": {
+    "title": "Add Custom Token",
+    "network": "Network",
+    "contract": "Contract Address",
+    "name": "Token Name",
+    "symbol": "Token Symbol",
+    "decimals": "Decimals"
+  },
+  "accountTypes": {
+    "smartAccount": "Smart Account (Checking)",
+    "normalAccount": "Normal Account"
+  }
+}
+

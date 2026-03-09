@@ -1,0 +1,81 @@
+{
+  "banner": {
+    "title": "コイン",
+    "walletTitle": "$0.00",
+    "mainWallet": "メインウォレット"
+  },
+  "nav": {
+    "network.mainnet": "メインネット",
+    "network.testnet": "テストネット"
+  },
+  "actions": {
+    "signOut": "ログアウト",
+    "send": "送金",
+    "receive": "受取",
+    "swap": "スワップ",
+    "copy": "コピー",
+    "next": "次へ",
+    "back": "戻る",
+    "approval": "承認",
+    "addToken": "カスタムトークンを追加",
+    "select": "選択",
+    "cancel": "キャンセル"
+  },
+  "tables": {
+    "coins": {
+      "title": "コイン",
+      "headers": {
+        "coin": "コイン",
+        "balance": "残高",
+        "action": "操作"
+      }
+    },
+    "history": {
+      "title": "履歴",
+      "headers": {
+        "type": "種類",
+        "date": "日時",
+        "amount": "数量",
+        "txid": "トランザクションID"
+      }
+    }
+  },
+  "sendForm": {
+    "amount": "金額",
+    "toAddress": "宛先アドレス",
+    "addressPlaceholder": "アドレス",
+    "scan": "スキャン",
+    "selectedCoin": "選択したコイン",
+    "selectCoin": "送金するコインを選択",
+    "selectCoinReceive": "受取するコインを選択",
+    "balance": "残高",
+    "from": "送信元",
+    "to": "送信先",
+    "networkFee": "ネットワーク手数料",
+    "maxTotal": "合計最大"
+  },
+  "receive": {
+    "address": "アドレス"
+  },
+  "messages": {
+    "noTransactionsFound": "トランザクションが見つかりません",
+    "failedToLoadTransactions": "トランザクションの読み込みに失敗しました",
+    "noCoinsAvailable": "利用可能なコインがありません",
+    "transferCompleted": "送金完了！",
+    "transactionHash": "トランザクションハッシュ",
+    "transactionFailed": "トランザクション失敗 - ハッシュが返されませんでした"
+  },
+  "customToken": {
+    "title": "カスタムトークンを追加",
+    "network": "ネットワーク",
+    "contract": "コントラクトアドレス",
+    "name": "トークン名",
+    "symbol": "トークンシンボル",
+    "decimals": "小数桁"
+  },
+  "accountTypes": {
+    "smartAccount": "スマートアカウント（決済専用）",
+    "normalAccount": "通常アカウント"
+  }
+}
+

@@ -1,0 +1,28 @@
+<svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+  xmlns="http://www.w3.org/2000/svg">
+  <!-- keep original shape; scale up slightly and center -->
+  <g transform="translate(0, 1.5) translate(12,10.5) scale(1.18) translate(-12,-10.5)">
+
+    <!-- Scan corners (same paths) -->
+    <path d="M5 8V6.5C5 5.67 5.67 5 6.5 5H8"
+          stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+    <path d="M19 8V6.5C19 5.67 18.33 5 17.5 5H16"
+          stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+    <path d="M5 16v1.5C5 18.33 5.67 19 6.5 19H8"
+          stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+    <path d="M19 16v1.5C19 18.33 18.33 19 17.5 19H16"
+          stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+
+    <!-- QR-like blocks (same) -->
+    <rect x="7" y="7" width="4" height="4" rx="0.8"
+          stroke="currentColor" stroke-width="1.5"/>
+    <rect x="13" y="7" width="4" height="4" rx="0.8"
+          stroke="currentColor" stroke-width="1.5"/>
+    <rect x="7" y="13" width="4" height="4" rx="0.8"
+          stroke="currentColor" stroke-width="1.5"/>
+
+    <!-- small data dots (same) -->
+    <path d="M14 14h1.5M17 14h0.01M14 17h0.01M16 17h1.5"
+          stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+  </g>
+</svg>

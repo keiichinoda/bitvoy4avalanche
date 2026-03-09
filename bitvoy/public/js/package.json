@@ -1,0 +1,15 @@
+{
+  "name": "frost-wasm",
+  "type": "module",
+  "version": "0.1.0",
+  "files": [
+    "frost_wasm_bg.wasm",
+    "frost_wasm.js",
+    "frost_wasm.d.ts"
+  ],
+  "main": "frost_wasm.js",
+  "types": "frost_wasm.d.ts",
+  "sideEffects": [
+    "./snippets/*"
+  ]
+}

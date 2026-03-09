@@ -1,0 +1,59 @@
+{
+  "title": "クロスチェーンスワップ",
+  "subtitle": "チェーン間でトークンをスワップ",
+  "samechainButton": "同一チェーンスワップ",
+  "from": {
+    "chain": "送信チェーン",
+    "chainPlaceholder": "チェーンを選択",
+    "token": "送信トークン",
+    "tokenPlaceholder": "トークンを選択",
+    "amount": "数量",
+    "balance": "残高"
+  },
+  "to": {
+    "chain": "受信チェーン",
+    "chainPlaceholder": "チェーンを選択",
+    "token": "受信トークン",
+    "tokenPlaceholder": "トークンを選択"
+  },
+  "crosschainSwapTokens": "クロスチェーンスワップ",
+  "reverseTokens": "トークンを入れ替え",
+  "actions": {
+    "preview": "プレビュー",
+    "swap": "スワップ",
+    "max": "最大",
+    "reverse": "⇄"
+  },
+  "quote": {
+    "youSend": "送信額（送信元）",
+    "bitvoyFee": "BitVoy手数料",
+    "bridgedAmount": "ブリッジ額",
+    "estimatedReceived": "受取見積額（受信先）",
+    "minimumReceived": "最小受取額",
+    "bridge": "ブリッジ",
+    "dex": "DEX",
+    "estimatedTime": "見積時間"
+  },
+  "errors": {
+    "selectChains": "送信と受信のチェーンを選択してください",
+    "selectTokens": "送信と受信のトークンを選択してください",
+    "sameChain": "送信と受信のチェーンは異なる必要があります",
+    "sameToken": "送信と受信のトークンは異なる必要があります",
+    "invalidAmount": "有効な数量を入力してください",
+    "invalidSelection": "無効な選択です",
+    "noWallet": "ウォレットアドレスが見つかりません。まずウォレットを作成してください。",
+    "quoteFailed": "見積りの取得に失敗しました",
+    "swapFailed": "スワップに失敗しました",
+    "balanceError": "残高の読み込みエラー",
+    "maxBalanceError": "残高の取得に失敗しました"
+  },
+  "success": {
+    "swapCompleted": "クロスチェーンスワップが正常に完了しました！",
+    "transaction": "トランザクション"
+  },
+  "network": {
+    "mainnet": "メインネット",
+    "testnet": "テストネット"
+  }
+}
+

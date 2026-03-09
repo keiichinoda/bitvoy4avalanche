@@ -1,0 +1,158 @@
+{
+  "banner": {
+    "headline": "BitVoY ウォレット",
+    "cta": "はじめる"
+  },
+  "sectionOne": {
+    "title": "ようこそ",
+    "subtitle": "BitVoY と Web3 をはじめましょう",
+    "cta": "はじめる"
+  },
+  "sectionTwo": {
+    "title": "BitVoY",
+    "subtitle": "金融や投資への冒険を、最初の一歩から。世界の事業と関わる旅を共に。",
+    "body": "BitVoyは、金融や投資という未知の世界への\"入口\"をひらき、誰もが安全に直感的に、世界の挑戦に関われるプラットフォームです。",
+    "aboutButton": "BitVoyについて"
+  },
+  "email": {
+    "warning": {
+      "title": "リカバリー用メール設定が必要です",
+      "description": "MPCウォレットの初期化は完了しましたが、リカバリーに必要なメールアドレスが設定されていません。メールアドレスを設定することで、Guardian Networkを通じてパスキー認証でウォレットを復旧できます。",
+      "startSetup": "メール設定を開始",
+      "setupLater": "後で設定"
+    },
+    "setup": {
+      "title": "リカバリー用メール設定",
+      "guardianTitle": "🔐 Guardian Network 復旧",
+      "description": "メールアドレスを設定することで、緊急時にGuardian Networkを通じてウォレットを復旧できます。この設定は任意ですが、セキュリティ向上のために推奨されます。",
+      "emailLabel": "メールアドレス",
+      "emailPlaceholder": "your.email@example.com",
+      "sendCode": "認証コードを送信"
+    },
+    "verification": {
+      "title": "メール認証の完了",
+      "verifyTitle": "✅ 認証コードの確認",
+      "description": "メール設定を完了するために、メールに送信された6桁の認証コードを入力してください。",
+      "codeLabel": "認証コード",
+      "codePlaceholder": "6桁のコードを入力",
+      "complete": "認証して設定完了"
+    }
+  },
+  "wallet": {
+    "main": "メインウォレット",
+    "market": "マーケット",
+    "services": "サービス",
+    "qrpay": "QR Pay",
+    "restore": {
+      "description": "以前に使用したアカウントを復元して開始するには、以下のリンクをクリックしてください：",
+      "link": "アカウントを復元"
+    }
+  },
+  "walletconnect": {
+    "deepLink": {
+      "signinRequired": "ウォレットを接続するにはログインしてください。"
+    }
+  },
+    "dialogs": {
+        "restore": {
+            "title": "復元",
+            "ready": "復元の準備ができました",
+            "cta": "続行"
+        },
+        "generic": {
+            "close": "閉じる"
+        },
+        "registration": {
+            "title": "登録",
+            "creating": "安全なMPCウォレットを作成しています...",
+            "successTitle": "成功",
+            "successMessage": "ウォレットの作成が完了しました！"
+        },
+        "signin": {
+            "title": "ログイン成功",
+            "message": "ログインが完了しました。"
+        },
+        "emergencyRecovery": {
+            "title": "リカバリー成功",
+            "message": "ウォレットの復旧が成功しました！",
+            "dialogTitle": "簡単リカバリー",
+            "startRecovery": "リカバリーを開始"
+        },
+        "restoration": {
+            "title": "復元完了！",
+            "message": "JWT認証でウォレットの復元が成功しました！"
+        },
+        "emergencySigning": {
+            "title": "リシェアによる緊急署名成功",
+            "message": "リシェアでトランザクションの署名が成功しました！",
+            "details": "署名詳細:",
+            "signature": "署名:"
+        },
+        "emailSecurity": {
+            "title": "🛡️ リカバリーのためのセキュリティ強化",
+            "description": "メール認証により、メールとパスキー生体認証/セキュリティキー認証の二要素認証で安全なリカバリーが可能になります。"
+        },
+        "iosInit": {
+            "title": "はじめる",
+            "firstTimeUse": "新規作成",
+            "subsequentUse": "ログイン"
+        }
+    },
+    "mySetup": {
+        "title": "マイセットアップ",
+        "pushNotifications": "プッシュ通知",
+        "developer": "開発者",
+        "network": "ネットワーク",
+        "close": "閉じる",
+        "notSupported": "通知機能を有効にするには、\nホーム画面への追加\nOSのアップデート\nをしてください。\n",
+        "permissionDenied": "通知を有効にするには、設定アプリ > 通知 > BitVoy から変更してください。",
+        "paymentSettings": "支払い設定",
+        "paymentSettingsDescription": "QR Payで使用するデフォルトのチェーンとトークンを設定",
+        "preferredChain": "優先チェーン",
+        "preferredToken": "優先トークン",
+        "selectChain": "チェーンを選択",
+        "selectToken": "トークンを選択",
+        "save": "保存",
+        "saved": "設定を保存しました",
+        "language": "言語",
+        "language.en": "English",
+        "language.ja": "日本語"
+    },
+    "pwa": {
+        "waitingForInstallPrompt": "ホーム画面に追加の準備ができ次第、再度お試しください。"
+    },
+    "payments": {
+        "scanToPay": "スキャンして支払う",
+        "receivePayment": "支払いを受取る",
+        "scanTitle": "QRコードをスキャン",
+        "scanDescription": "QRコードをスキャンして支払う",
+        "scanning": "スキャン中...",
+        "cancel": "キャンセル",
+        "confirmPayment": "支払いを確認",
+        "paymentDetails": "支払い詳細",
+        "to": "送信先",
+        "amount": "金額",
+        "token": "トークン",
+        "chain": "チェーン",
+        "memo": "メモ",
+        "approve": "承認",
+        "receiveTitle": "支払いを受取る",
+        "receiveDescription": "支払い受取用のQRコードを生成",
+        "amountLabel": "金額",
+        "amountPlaceholder": "金額を入力",
+        "memoLabel": "メモ（任意）",
+        "memoPlaceholder": "メモを入力",
+        "generateQR": "QRコードを生成",
+        "invalidQR": "無効なQRコード形式です",
+        "unsupportedChain": "サポートされていないチェーンです。マイセットアップで設定したチェーンを使用してください。",
+        "unsupportedToken": "サポートされていないトークンです。マイセットアップで設定したトークンを使用してください。",
+        "chainMismatch": "チェーンが一致しません。期待値: {{expected}}、実際: {{got}}",
+        "tokenMismatch": "トークンが一致しません。期待値: {{expected}}、実際: {{got}}"
+    },
+    "actions": {
+        "getStarted": "はじめる",
+        "mySetup": "マイセットアップ",
+        "signOut": "ログアウト",
+        "emergencyRecovery": "簡単リカバリー"
+    }
+}

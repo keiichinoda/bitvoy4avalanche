@@ -1,0 +1,12 @@
+{
+  "wallet": {
+    "title": "🔐 BitVoy Wallet Authentication",
+    "authRequired": "Authentication Required",
+    "authMessage": "A client application has requested authentication. Please complete passkey authentication with your BitVoy wallet to continue.",
+    "startPasskeyAuth": "🔐 Start Passkey Authentication",
+    "authenticating": "Authenticating...",
+    "authSuccess": "Authentication Successful",
+    "authFailed": "Authentication Failed",
+    "authCanceled": "Authentication Canceled"
+  }
+}

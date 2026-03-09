@@ -1,0 +1,21 @@
+{
+  "pay": {
+    "title": "支払い確認",
+    "confirm": "支払い内容の確認",
+    "currency": "通貨",
+    "amount": "数量",
+    "to": "送金先",
+    "sign": "署名して送信",
+    "cancel": "キャンセル",
+    "completed": "支払い完了",
+    "processing": "処理中...",
+    "success": "支払いが完了しました",
+    "failed": "支払いに失敗しました",
+    "canceled": "支払いがキャンセルされました",
+    "error": "エラー",
+    "insufficientBalance": "{{symbol}}の残高が不足しています: {{balance}} < {{required}}",
+    "insufficientGas": "ガス代用の{{token}}残高が不足しています。取引手数料を支払うために、ウォレットに{{token}}を追加してください。",
+    "lowGas": "{{token}}残高が少ないです。ガス代不足により取引が失敗する可能性があります。取引手数料を支払うために、十分な{{token}}があることを確認してください。"
+  }
+}
+

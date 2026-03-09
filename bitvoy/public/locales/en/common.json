@@ -1,0 +1,114 @@
+{
+  "brand": {
+    "name": "BitVoY",
+    "wallet": "Wallet"
+  },
+  "nav": {
+    "menu": "Menu",
+    "home": "Home",
+    "coins": "Coins",
+    "coinsSubtitle": "Crypto Wallet",
+    "membership": "Membership",
+    "membershipSubtitle": "Join & Benefits",
+    "cryptogift": "Crypto Gift",
+    "cryptogiftSubtitle": "Send & Share",
+    "featured": "Featured",
+    "featuredSubtitle": "Featured Crypto",
+    "swap": "Swap",
+    "swapSubtitle": "Swap & Trade",
+    "crosschain": "Cross-chain",
+    "crosschainSubtitle": "Cross-chain Swap",
+    "nfts": "NFTs",
+    "nftsSubtitle": "NFT Wallet",
+    "affiliates": "Affiliates",
+    "affiliatesSubtitle": "Earn & Promote",
+    "marketplace": "Marketplace",
+    "gacha": "Gacha",
+    "gallery": "Gallery",
+    "tokensale": "Token Sale",
+    "wallet": "My Wallet",
+    "walletconnect": "WalletConnect",
+    "network": {
+      "mainnet": "Mainnet",
+      "testnet": "Testnet"
+    }
+  },
+  "actions": {
+    "getStarted": "Get Started",
+    "mySetup": "My Setup",
+    "addToHomeScreen": "Add to Home Screen",
+    "signIn": "Log In",
+    "signOut": "Log Out",
+    "close": "Close",
+    "continue": "Continue",
+    "ok": "OK",
+    "cancel": "Cancel",
+    "back": "Back",
+    "processing": "Processing..",
+    "confirm": "Confirm"
+  },
+  "footer": {
+    "copyright": "© BITVOY",
+    "design": "Design: HTML5 UP",
+    "twitter": "Twitter",
+    "facebook": "Facebook",
+    "instagram": "Instagram",
+    "github": "GitHub",
+    "linkedin": "LinkedIn",
+    "x": "X"
+  },
+  "dialog": {
+    "genericTitle": "Notice",
+    "restore": {
+      "title": "Restore",
+      "ready": "Ready to restore"
+    }
+  },
+  "misc": {
+    "loading": "Loading..."
+  },
+  "wallet": {
+    "title": "🔐 BitVoy Wallet Authentication",
+    "authRequired": "Authentication Required",
+    "authMessage": "A client application has requested authentication. Please complete passkey authentication with your BitVoy wallet to continue.",
+    "startPasskeyAuth": "🔐 Start Passkey Authentication",
+    "authenticating": "Authenticating...",
+    "authSuccess": "Authentication Successful",
+    "authFailed": "Authentication Failed",
+    "authCanceled": "Authentication Canceled"
+  },
+  "getStarted": {
+    "title": "🔐 BitVoy Account Creation",
+    "required": "Account Creation Required",
+    "message": "To complete authentication, you need to create a BitVoy account first. Click the button below to start the account creation process.",
+    "createAccount": "Create BitVoy Account",
+    "cancel": "Cancel"
+  },
+  "pay": {
+    "confirm": "Confirm Payment",
+    "currency": "Currency",
+    "amount": "Amount",
+    "to": "Recipient",
+    "sign": "Sign",
+    "cancel": "Cancel",
+    "completed": "Payment Completed",
+    "failed": "Payment failed",
+    "error": "Error",
+    "insufficientBalance": "Insufficient {{symbol}} balance: {{balance}} < {{required}}",
+    "insufficientGas": "Insufficient {{token}} balance for gas fee. Please add {{token}} to your wallet to pay for transaction fees.",
+    "lowGas": "Low {{token}} balance. Transaction may fail due to insufficient gas. Please ensure you have enough {{token}} to pay for transaction fees."
+  },
+  "errors": {
+    "walletAlreadyExists": {
+      "title": "Wallet Already Exists",
+      "message": "A wallet has already been created for this device.<br><br>If you need to access your existing wallet, please use the \"Log In\" option instead.<br><br>If you want to perform easy recovery, please use the \"Easy Recovery\" option."
+    }
+  },
+  "inAppBrowser": {
+    "detected": "In-app browser detected. We recommend viewing in an external browser such as Chrome or Safari.",
+    "openInSafari": "Open in Safari",
+    "openInChrome": "Open in Chrome",
+    "copyUrl": "Copy URL (open manually)",
+    "urlCopied": "URL copied. Please open in Safari / Chrome."
+  }
+}

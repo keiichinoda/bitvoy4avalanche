@@ -1,0 +1,114 @@
+{
+  "brand": {
+    "name": "BitVoY",
+    "wallet": "ウォレット"
+  },
+  "nav": {
+    "menu": "メニュー",
+    "home": "ホーム",
+    "coins": "コイン",
+    "coinsSubtitle": "暗号資産ウォレット",
+    "membership": "メンバーシップ",
+    "membershipSubtitle": "参加と特典",
+    "cryptogift": "クリプトギフト",
+    "cryptogiftSubtitle": "ギフト・シェア",
+    "featured": "ピックアップ",
+    "featuredSubtitle": "クリプト特集",
+    "swap": "スワップ",
+    "swapSubtitle": "両替・トレード",
+    "crosschain": "クロスチェーン",
+    "crosschainSubtitle": "クロスチェーンスワップ",
+    "nfts": "NFTs",
+    "nftsSubtitle": "NFTウォレット",
+    "affiliates": "アフィリエイト",
+    "affiliatesSubtitle": "紹介して稼ぐ",
+    "marketplace": "マーケットプレイス",
+    "gacha": "ガチャ",
+    "gallery": "ギャラリー",
+    "tokensale": "トークン販売",
+    "wallet": "マイウォレット",
+    "walletconnect": "WalletConnect",
+    "network": {
+      "mainnet": "メインネット",
+      "testnet": "テストネット"
+    }
+  },
+  "actions": {
+    "getStarted": "はじめる",
+    "mySetup": "マイセットアップ",
+    "addToHomeScreen": "ホーム画面に追加",
+    "signIn": "ログイン",
+    "signOut": "ログアウト",
+    "close": "閉じる",
+    "continue": "続行",
+    "ok": "OK",
+    "cancel": "キャンセル",
+    "back": "戻る",
+    "processing": "処理中..",
+    "confirm": "確認"
+  },
+  "footer": {
+    "copyright": "© BITVOY",
+    "design": "Design: HTML5 UP",
+    "twitter": "Twitter",
+    "facebook": "Facebook",
+    "instagram": "Instagram",
+    "github": "GitHub",
+    "linkedin": "LinkedIn",
+    "x": "X"
+  },
+  "dialog": {
+    "genericTitle": "お知らせ",
+    "restore": {
+      "title": "復元",
+      "ready": "復元の準備ができました"
+    }
+  },
+  "misc": {
+    "loading": "読み込み中..."
+  },
+  "wallet": {
+    "title": "🔐 BitVoy 認証",
+    "authRequired": "認証が必要です",
+    "authMessage": "クライアントアプリケーションからの認証リクエストを受信しました。続行するには、BitVoy ウォレットでパスキー認証を行ってください。",
+    "startPasskeyAuth": "🔐 パスキー認証を開始",
+    "authenticating": "パスキー認証中...",
+    "authSuccess": "認証成功",
+    "authFailed": "認証失敗",
+    "authCanceled": "認証キャンセル"
+  },
+  "getStarted": {
+    "title": "🔐 BitVoy アカウント作成",
+    "required": "アカウント作成が必要です",
+    "message": "認証を完了するには、まずBitVoyアカウントを作成する必要があります。下のボタンをクリックしてアカウント作成プロセスを開始してください。",
+    "createAccount": "BitVoyアカウントを作成",
+    "cancel": "キャンセル"
+  },
+  "pay": {
+    "confirm": "支払い内容の確認",
+    "currency": "通貨",
+    "amount": "金額",
+    "to": "送信先",
+    "sign": "署名する",
+    "cancel": "キャンセル",
+    "completed": "支払い完了",
+    "failed": "支払いに失敗しました",
+    "error": "エラー",
+    "insufficientBalance": "{{symbol}}の残高が不足しています: {{balance}} < {{required}}",
+    "insufficientGas": "ガス代用の{{token}}残高が不足しています。取引手数料を支払うために、ウォレットに{{token}}を追加してください。",
+    "lowGas": "{{token}}残高が少ないです。ガス代不足により取引が失敗する可能性があります。取引手数料を支払うために、十分な{{token}}があることを確認してください。"
+  },
+  "errors": {
+    "walletAlreadyExists": {
+      "title": "ウォレットが既に存在します",
+      "message": "このデバイスには既にウォレットが作成されています。<br><br>既存のウォレットにアクセスするには、「ログイン」オプションを使用してください。<br><br>簡単リカバリーを実行するには、「簡単リカバリー」オプションを使用してください。"
+    }
+  },
+  "inAppBrowser": {
+    "detected": "アプリ内ブラウザを検出しました。Chrome, Safariなどの外部ブラウザでの閲覧をおすすめします。",
+    "openInSafari": "Safariで開く",
+    "openInChrome": "Chromeで開く",
+    "copyUrl": "URLをコピー（手動で開く）",
+    "urlCopied": "URLをコピーしました。Safari / Chromeで開いてください。"
+  }
+}

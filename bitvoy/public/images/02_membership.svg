@@ -1,0 +1,9 @@
+<!-- membership_shield.svg -->
+<svg xmlns="http://www.w3.org/2000/svg" width="256" height="256" viewBox="0 0 256 256" fill="none">
+  <g stroke="currentColor" stroke-width="12" stroke-linecap="round" stroke-linejoin="round">
+    <!-- Shield -->
+    <path d="M128 40l72 28v62c0 54-36 86-72 98-36-12-72-44-72-98V68l72-28z" />
+    <!-- Star -->
+    <path d="M128 92l12 26 28 4-20 19 5 28-25-14-25 14 5-28-20-19 28-4 12-26z" />
+  </g>
+</svg>

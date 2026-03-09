@@ -1,0 +1,167 @@
+{
+  "pageTitle": "メンバーシップ - BitVoy Wallet",
+  "menu": "Menu",
+  "banner": {
+    "title": "メンバーシップ",
+    "desc": "BitVoyを、もっと自由に。参加するほど価値が広がるメンバーシップ制度。"
+  },
+  "actions": {
+    "signOut": "ログアウト",
+    "join": "参加",
+    "upgrade": "アップグレード",
+    "downgrade": "ダウングレード",
+    "cancel": "キャンセル",
+    "save": "保存"
+  },
+  "plan": {
+    "current": "現在のプラン",
+    "nextBilling": "次回請求",
+    "status": "ステータス"
+  },
+  "forms": {
+    "email": "メール",
+    "name": "氏名",
+    "submit": "送信"
+  },
+  "founderTiers": {
+    "diamond": {
+      "title": "🟦 Diamond ファウンダー",
+      "catch": "<strong>BitVoy の「最上位席」</strong>",
+      "description": "Diamond ファウンダー は、<br>ファウンダー メンバーシップ の中でも <strong>最上位ランク</strong> です。<br><br>BitVoy の成長を最も近くで体験し、<br>すべての特典・優先権を <strong>最大限</strong> に受け取ることができます。",
+      "benefitsTitle": "主な特典",
+      "benefit1Title": "限定イベントへの最優先アクセス",
+      "benefit1Description": "限定イベントへの最優先アクセスにより、特別なシークレット体験の機会が提供されます。",
+      "benefit2Title": "手数料割引（BVCキャッシュバック）：最大",
+      "benefit2Description": "取引・決済における BVC キャッシュバックが最大水準で適用されます。",
+      "benefit3Title": "ファウンダー 専用ガチャ（最上位抽選プール）",
+      "benefit3Description": "ファウンダー 専用ガチャの中でも、最上位の抽選プールにアクセス可能です。",
+      "benefit4Title": "エアドロップ：最大",
+      "benefit4Description": "BitVoy のトークン・エアドロップにおいて、最大配分水準での優先対象となります。",
+      "benefit5Title": "リアルワールド（RWA）特典：最優先",
+      "benefit5Description": "トレカ、イベント、体験等の RWA 特典において、マーケットやウォンテッドリスト等への最優先掲示が行われます。",
+      "benefit6Title": "プロジェクト方針・提携先への投票権：最大",
+      "benefit6Description": "プロジェクトの方向性や提携先選定に関する投票において、最も高い影響度で参加できます。",
+      "benefit7Title": "Diamond 専用称号・バッジ表示",
+      "benefit7Description": "プロフィールやマーケット、コミュニティ上で Diamond ファウンダー 専用の称号・バッジが表示されます。",
+      "recommendedTitle": "こんな方におすすめ",
+      "recommended1": "BitVoy を中核サービスとして使いたい方",
+      "recommended2": "すべての特典・優先権を逃したくない方"
+    },
+    "platinum": {
+      "title": "🟪 Platinum ファウンダー",
+      "catch": "<strong>バランスの取れた上位 メンバーシップ</strong>",
+      "description": "Platinum ファウンダー は、<br>特典と参加しやすさを両立した <strong>上位ランク</strong> です。<br><br>主要な ファウンダー 特典をしっかり受け取りながら、<br>BitVoy の進化を <strong>長く楽しめる</strong> メンバーシップ です。",
+      "benefitsTitle": "主な特典",
+      "benefit1Title": "限定イベントへの上位優先アクセス",
+      "benefit1Description": "限定イベントへの上位優先アクセスにより、一般参加枠よりも優遇された条件で、特別な体験機会が提供されます。",
+      "benefit2Title": "手数料割引（BVCキャッシュバック）：高水準",
+      "benefit2Description": "取引・決済における BVC キャッシュバックが高水準で適用されます。",
+      "benefit3Title": "ファウンダー 専用ガチャ（上位抽選プール）",
+      "benefit3Description": "ファウンダー 専用ガチャの中でも、上位の抽選プールにアクセス可能です。",
+      "benefit4Title": "エアドロップ：高配分",
+      "benefit4Description": "BitVoy のトークン・エアドロップにおいて、優遇された高配分水準での対象となります。",
+      "benefit5Title": "リアルワールド（RWA）特典：特別優先",
+      "benefit5Description": "トレカ、イベント、体験等の RWA 特典において、マーケットやウォンテッドリスト等で特別優先掲示が行われます。",
+      "benefit6Title": "プロジェクト方針・提携先への投票権：拡張",
+      "benefit6Description": "プロジェクトの方向性や提携先選定に関する投票において、拡張された影響度で参加できます。",
+      "benefit7Title": "Platinum 専用称号・バッジ表示",
+      "benefit7Description": "プロフィールやマーケット、コミュニティ上で Platinum ファウンダー 専用の称号・バッジが表示されます。",
+      "recommendedTitle": "こんな方におすすめ",
+      "recommended1": "実用性と特典のバランスを重視する方",
+      "recommended2": "無理なく ファウンダー 特典を楽しみたい方"
+    },
+    "aurora": {
+      "title": "🟨 Aurora ファウンダー",
+      "catch": "<strong>BitVoy を先取りするエントリー ファウンダー</strong>",
+      "description": "Aurora ファウンダー は、<br>ファウンダー メンバーシップ の <strong>スタンダードランク</strong> です。<br><br>初期メンバーとしての特典を受け取りながら、<br>BitVoy のサービスを <strong>段階的に体験</strong> できます。",
+      "benefitsTitle": "主な特典",
+      "benefit1Title": "限定イベントへの優先アクセス",
+      "benefit1Description": "限定イベントへの優先アクセスにより、一般参加よりも優遇された条件で参加機会が提供されます。",
+      "benefit2Title": "手数料割引（BVCキャッシュバック）：優遇",
+      "benefit2Description": "取引・決済における BVC キャッシュバックが優遇条件で適用されます。",
+      "benefit3Title": "ファウンダー 専用ガチャ（優先抽選プール）",
+      "benefit3Description": "ファウンダー 専用ガチャの優先抽選プールにアクセス可能です。",
+      "benefit4Title": "エアドロップ：優先配分",
+      "benefit4Description": "BitVoy のトークン・エアドロップにおいて、優先配分の対象となります。",
+      "benefit5Title": "リアルワールド（RWA）特典：優先",
+      "benefit5Description": "トレカ、イベント、体験等の RWA 特典において、マーケットやウォンテッドリスト等で優先掲示が行われます。",
+      "benefit6Title": "プロジェクト方針・提携先への投票権：付与",
+      "benefit6Description": "プロジェクトの方向性や提携先選定に関する投票に参加できます。",
+      "benefit7Title": "Aurora 専用称号・バッジ表示",
+      "benefit7Description": "プロフィールやマーケット、コミュニティ上で Aurora ファウンダー 専用の称号・バッジが表示されます。",
+      "recommendedTitle": "こんな方におすすめ",
+      "recommended1": "ファウンダー として参加してみたい方",
+      "recommended2": "まずは メンバーシップ を体験したい方"
+    },
+    "crystal": {
+      "title": "🟩 Crystal ファウンダー",
+      "catch": "<strong>最も参加しやすい ファウンダー メンバーシップ</strong>",
+      "description": "Crystal ファウンダー は、<br>初めて BitVoy メンバーシップ に参加する方向けの <strong>エントリーランク</strong> です。<br><br>気軽に参加しながら、<br>ファウンダー 限定の体験や特典を <strong>無理なく楽しめます</strong>。",
+      "benefitsTitle": "主な特典",
+      "benefit1Title": "限定イベントへのアクセス",
+      "benefit1Description": "限定イベントへの参加機会が提供されます。",
+      "benefit2Title": "手数料割引（BVCキャッシュバック）：適用",
+      "benefit2Description": "取引・決済における BVC キャッシュバックが適用されます。",
+      "benefit3Title": "ファウンダー 専用ガチャ（参加抽選プール）",
+      "benefit3Description": "ファウンダー 専用ガチャの参加抽選プールにアクセス可能です。",
+      "benefit4Title": "エアドロップ：配分対象",
+      "benefit4Description": "BitVoy のトークン・エアドロップの配布対象となります。",
+      "benefit5Title": "リアルワールド（RWA）特典：優先対象",
+      "benefit5Description": "トレカ、イベント、体験等の RWA 特典において、ファウンダー 枠としてマーケットやウォンテッドリスト等に掲示されます。",
+      "benefit6Title": "プロジェクト方針・提携先への投票権：対象",
+      "benefit6Description": "プロジェクトの方向性や提携先選定に関する投票の対象となります。",
+      "benefit7Title": "Crystal 専用称号・バッジ表示",
+      "benefit7Description": "プロフィールやマーケット、コミュニティ上で Crystal ファウンダー 専用の称号・バッジが表示されます。",
+      "recommendedTitle": "こんな方におすすめ",
+      "recommended1": "まずは様子を見ながら参加したい方",
+      "recommended2": "メンバーシップ を試してみたい方"
+    }
+  },
+  "sections": {
+    "whatIs": {
+      "title": "ファウンダー メンバーシップ とは",
+      "description": "BitVoy Wallet・マーケットプレイス・提携サービスで特典・優先権・限定体験を受け取れる参加型メンバー制度です。参加証として ファウンダー 証明書（NFT） が発行されます。",
+      "currentStatus": "現在のステータス",
+      "statusText": "<strong>現在のステータス：一般ユーザー</strong><br/>参加すると特典が段階的に解放されます。"
+    },
+    "benefits": {
+      "title": "メンバーシップ 特典の一例",
+      "benefit1": "BitVoy内 各種手数料の割引",
+      "benefit2": "ファウンダー限定コンテンツへのアクセス",
+      "benefit3": "限定ガチャ・優先購入枠",
+      "benefit4": "招待・アフィリエイト特典のブースト",
+      "benefit5": "提携サービスでの優待",
+      "note": "※ 特典内容は メンバーシップ ランクにより異なります。"
+    },
+    "howToJoin": {
+      "title": "参加方法",
+      "description": "BitVoy メンバーシップ は <strong>ファウンダー証明書を取得することで有効化</strong>されます。ファウンダー証明書は、メンバーシップ の参加証であり、特典を受け取るためのデジタル証明です。投資性ではなく、サービス利用に関する権利・特典を表すメンバーシップです。"
+    },
+    "chooseFounder": {
+      "title": "ファウンダー メンバーシップ を選ぶ",
+      "description": "参加するランクによって、受け取れる特典と体験が異なります。",
+      "button": "ファウンダー ランク一覧を見る"
+    },
+    "faq": {
+      "title": "よくある不安への回答",
+      "q1": "将来、特典は増えますか？ → はい。BitVoyの成長とともに追加されます。",
+      "q2": "使わなくなったらどうなりますか？ → 特典はいつでも確認・利用できます。",
+      "q3": "暗号資産に詳しくなくても大丈夫？ → 購入・管理は暗号資産の知識がなくても行えます。",
+      "button": "メンバーシップ に参加する",
+      "note": "※ ファウンダー証明書が発行されます。※ 数量には上限があります。"
+    },
+    "ranks": {
+      "title": "ファウンダー メンバーシップ ランク一覧",
+      "subtitle": "ファウンダー証明書は投資商品ではなく、BitVoy の各種特典を有効化する参加証です。"
+    },
+    "cta": {
+      "title": "あなたに合った ファウンダー メンバーシップ を選んでください",
+      "buttonDiamond": "Diamond ファウンダー に参加する",
+      "buttonPlatinum": "Platinum ファウンダー に参加する",
+      "buttonAurora": "Aurora ファウンダー に参加する",
+      "buttonCrystal": "Crystal ファウンダー に参加する",
+      "note": "※ ファウンダー証明書が発行されます / 各ランクに発行上限があります"
+    }
+  }
+}
+
