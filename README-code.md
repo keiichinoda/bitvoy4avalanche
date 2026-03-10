@@ -1,19 +1,36 @@
-Code folder structure
+# Code Folder Structure
 
-[OIDC Provider]
+## OIDC Provider
+
+```
+
 ./bitvoy-oidc-provider
 ./bitvoy-oidc-provider/keys
 ./bitvoy-oidc-provider/routes
 ./bitvoy-oidc-provider/services
 ./bitvoy-oidc-provider/docs
 
-[Smart Contract]
+```
+
+---
+
+## Smart Contract
+
+```
+
 ./solidity
 ./solidity/bitvoy-aa
 ./solidity/bitvoy-aa/contracts
 ./solidity/bitvoy-aa/scripts
 
-[BitVoy Frontend]
+```
+
+---
+
+## BitVoy Frontend
+
+```
+
 ./bitvoy/public
 ./bitvoy/public/.well-known
 ./bitvoy/public/css
@@ -26,7 +43,14 @@ Code folder structure
 ./bitvoy/public/styles
 ./bitvoy/scripts
 
-[BitVoy Backend]
+```
+
+---
+
+## BitVoy Backend
+
+```
+
 ./bitvoy/server
 ./bitvoy/server/api
 ./bitvoy/server/api/controllers
@@ -35,11 +59,23 @@ Code folder structure
 ./bitvoy/server/services
 ./bitvoy/server/utils
 
-[BitVoy MPC Server]
+```
+
+---
+
+## BitVoy MPC Server
+
+```
+
 ./bitvoy-mpc
 ./bitvoy-mpc/p2server
 ./bitvoy-mpc/p2server/dist
 ./bitvoy-mpc/p2server/src
 
-*Security-related files and files not included in Build Games are excluded.
+```
 
+---
+
+**Note**
+
+Security-related files and files not included in the Build Games submission are excluded.
